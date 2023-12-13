@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./passengerCounterCodeIndex.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>People Entered: </h1>
+        <h2 id="count-el">0</h2>
+        <!-- on the on click add the function name that we have to call -->
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">save</button>
+        <p id="save-el">Previous Entries: </p>
+    </div>
+
+    <div class="container-2">
+        <p id="welcome-el"></p>
+        <button id="print-btn" onclick="printUserName()">Print User Name</button>
+    </div>
+
+    <div class="container-3">
+        <img src="../Images/email.png" alt="" width="200px">
+        <p id="f-element">Nike Shoe</p>
+
+        <button id="shopping-btn" onclick="clickEventWhenClick()">
+            Purchase = $149
+        </button>
+        <p id="error"></p>
+    </div>
+    <script src="./basicJs2.js"></script>
+
+</body>
+
+</html>

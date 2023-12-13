@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    background-color: #333;
+    /* overflow: hidden; */
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+main {
+    background-color: white;
+    text-align: center;
+}
+
+h2 {
+    padding: 20px;
+}
+
+section:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+section {
+    text-align: center;
+    height: 100%;
+    padding-top: 75px 0px;
+    min-height: 100vh;
+}
+
+video {
+    padding: 10px;
+}
+
+iframe {
+    height: 75vh;
+}
+
+img {
+    padding: 10px;
+}
+
+section h5 {
+    margin: 40px;
+}
+
+footer {
+    background-color: #333;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+.banner {
+    background-image: url(../Images/android-chrome-192x192.png);
+    height: 20vw;
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 50%;
+
+    /* it is use for fic the images conenet and only scrollbar will scroll */
+    background-attachment: fixed;
+}
+
+.flex-align-right {
+    margin-left: auto;
+}
+
+.menu-btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+section h2 span {
+    /* https://cssgradient.io/  [Refer this Website] */
+    background: linear-gradient(to right, #f5d837, #bbb812);
+    padding: 10px 55px;
+    border-radius: 30px;
+    color: white;
+}
+
+/* carousel  feature */
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    /* background: #8C8; */
+    /* border-radius: 5px; */
+    /* counter-increment: carousel-cell; */
+}
+
+.carousel-cell video {
+    max-width: 100%;
+}
+
+.iframe-container {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* 16:9 */
+    position: relative;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-responsive {
+    max-width: 100vh;
+    height: 100vh;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.sm-handle a {
+    background-color: rgb(125 125 125/ 25%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+i{
+    margin: 5px;
+}
+/* 
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+} */
+
+@media screen and (max-width: 570px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .flex-align-right {
+        margin-left: 0;
+    }
+}
