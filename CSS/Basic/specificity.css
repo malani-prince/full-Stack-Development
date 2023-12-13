@@ -1,0 +1,44 @@
+.fav{
+    columns: red;
+    font-weight: bold;
+}
+
+ul#summar-drink li{
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
+}
+
+ul#summar-drink li.fav{
+    columns: red;
+    font-weight: bold;
+}
+
+ul#summar-drink li{
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
+}
+
+/* -------------------------- */
+
+#fav{
+    columns: red;
+    font-weight: bold;
+}
+
+ul.summar-drink li{
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
+}
+
+#sp-link{
+    background-color:rgb(232, 200, 200);
+    text-decoration: none;
+}
+
+a#sp-link:hover{
+    text-decoration: underline;
+    color: rgb(34, 92, 151);
+}

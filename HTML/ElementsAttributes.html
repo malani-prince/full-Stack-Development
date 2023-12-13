@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Introduction about the Tags. </p>
+    <p>there are two types of tags </p>
+    <p>
+        <li>Opening</li>
+    </p>
+    <p>
+        <li>closing</li>
+    </p>
+    <p>
+        <li>there are some tags who doesn't have any closing Tags</li>
+    </p>
+
+    <hr>
+    <p>Nesting of the elements is possible: </p>
+
+    <hr>
+    <h3> what is Attribute ?</h3>
+    <p align="center"> heat is the text in the center with <strong>{align = center}</strong> Attribute</p>
+    <p align="left"> heat is the text in the center with <strong>{align = "left"}</strong> Attribute</p>
+    <p align="right"> heat is the text in the center with <strong> {align = "right"}</strong> Attribute</p>
+
+    <hr>
+    <p>Boolean Attribute</p>
+    <input type="text" required>
+    <input type="text" disabled>
+
+    <hr>
+
+    <h3>Attribute that is majorly use</h3>
+    <p>
+        <li>id</li>
+    </p>
+    <p>
+        <li>class</li>
+    </p>
+    <p id="first"> id declare as a first </p>
+    <p class="first">class declare as a first</p>
+    <p><strong>id and class may have same name </strong></p>
+
+    <hr>
+
+    <h2>HyperLinks</h2>
+    <h3>
+        <li>Absolute path (city location to friend house)</li>
+    </h3>
+    <h3>
+        <li>actual path (person who standing on the road and from there to his friends house)</li>
+    </h3>
+
+    <a href="https://www.google.com" target="_blank">
+        <h3> Google</h3>
+    </a>
+
+    <p> <strong>../ --> is use for the access the previous directory</p></strong>
+
+    <p>_self (Default): <a href="https://www.google.com" target="_self">_self_use</a></p>
+    <p>_parent: <a href="https://www.google.com" target="_parent">_parent_use</a></p>
+    <p>_top: <a href="https://www.google.com" target="_top">__top_use</a></p>
+    <p>_blank: <a href="https://www.google.com" target="_blank">__top_use</a></p>
+
+
+    <h3>To create a link that opens in the user's email program (to let them send a new email), use mailto: inside the
+        href attribute:</h3>
+
+    <p><a href="mailto:someone@example.com">Send email</a></p>
+
+    <h3>Attach absolute path of HTML</h3>
+
+    <a href="forHyperLink.html" target="_blank">
+        <h3>Absolute path Link</h3>
+    </a>
+
+    <h3>outer file access</h3>
+
+    <a href="../accessOuterFile.html">
+        <h3>OuterFile Access</h3>
+    </a>
+
+    <p>Open PDF using Anchor teg</p>
+    <a href="../PDFS/Ch 2.pdf">
+        <h3>access the PDFS</h3>
+    </a>
+
+    <hr>
+
+    <h2>Image tag UseCase</h2>
+    <p>img tag Syntex: <br><br>
+        < img <strong>src = "source name"</strong> alt= "default value it accurce when source is not proper found in any
+            Perticular place"<strong></strong>>
+    </p>
+    <img src="../Images/avatar-prem.png" alt="Add Image">
+
+    <hr>
+    <h3>Video Tag Use</h3>
+    <h3>Using controls method when any user come then uaer manually start the video</h3>
+    <video src="../Videos/production_id_4620563 (2160p).mp4" width="400" controls></video>
+
+    <h3>Video start automatically when user reach to the website</h3>
+
+    <video src="../Videos/production_id_4620563 (2160p).mp4" width="400" autoplay loop>
+    </video>
+
+    <hr>
+
+    <h3>Emmbadding (iframe)</h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2QR11oDukn4?si=3Atb98wapz5dt8au"
+        title="YouTube video player" frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    <iframe src="https://www.pexels.com/search/videos/dummy/" frameborder="0" width="400" height="400"></iframe>
+
+
+    <hr>
+
+    <h2>Table Making</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>theory</th>
+                <th>total makes </th>
+                <th>grades</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>English</td>
+                <td>564</td>
+                <td>2323</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>512</td>
+                <td>2121</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>232</td>
+                <td>908</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>Grammar</td>
+                <td>80</td>
+                <td>9823</td>
+                <td>A+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="4">Results: Pass</th>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment for the Position</title>
+    <link rel="stylesheet" href="./assignment-position.css">
+</head>
+
+<body>
+
+    <div id="title">
+        <h1>Product</h1>
+    </div>
+
+    <div class="main-container">
+        <nav id="navigation">
+            <a href="#">Home</a>
+            <a href="#">Contacts</a>
+            <a href="#">About Us</a>
+            <a href="#">Projects</a>
+        </nav>
+    </div>
+
+    <div id="content">
+        <h1 class="base-title-left" style="margin-top: 50px;">Lorem, ipsum.</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae tempore
+            necessitatibus sint pariatur rerum doloribus minus magnam cupiditate! In cum similique deleniti beatae
+            repellendus, aliquam velit quisquam? Voluptas, in?</p>
+
+        <h1 class="base-title-right" style="margin-top: 50px;">Lorem, ipsum.</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae tempore
+            necessitatibus sint pariatur rerum doloribus minus magnam cupiditate! In cum similique deleniti beatae
+            repellendus, aliquam velit quisquam? Voluptas, in?</p>
+        <h1 class="base-title-left" style="margin-top: 50px;">Lorem, ipsum.</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae tempore
+            necessitatibus sint pariatur rerum doloribus minus magnam cupiditate! In cum similique deleniti beatae
+            repellendus, aliquam velit quisquam? Voluptas, in?</p>
+
+        <h1 class="base-title-right" style="margin-top: 50px;">Lorem, ipsum.</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae tempore
+            necessitatibus sint pariatur rerum doloribus minus magnam cupiditate! In cum similique deleniti beatae
+            repellendus, aliquam velit quisquam? Voluptas, in?</p>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Store the navigation 
+            var navigation = document.getElementById("navigation");
+
+            // store the title element
+            var title = document.getElementById("title");
+
+            // add the event that work when the condition of scroll is hit.
+            window.addEventListener("scroll", function () {
+                var titleHeight = title.clientHeight;
+
+                if (window.scrollY > titleHeight) {
+                    navigation.style.position = "fixed";
+                    navigation.style.top = "0";
+                    navigation.style.width = "100%";
+                    navigation.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.2)";
+                    navigation.style.background = "rgb(59, 59, 59)";
+                } else {
+                    navigation.style.position = "static";
+                    navigation.style.boxShadow = "none";
+                    navigation.style.background = "rgb(59, 59, 59)";
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+body{
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
+}
+
+
+.main-cont{
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.img-1{
+    float: right;
+}
+
+.img-2{
+    float: left;
+}
+
+.img-3{
+    float: right;
+}
+
+.img-4{
+    float: left;
+}

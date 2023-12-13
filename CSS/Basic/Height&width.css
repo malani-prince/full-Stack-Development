@@ -1,0 +1,25 @@
+#para-title{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 19px;
+    color: rgb(37, 128, 208);
+
+}
+
+#height-weight{
+    border: 1px solid black;
+
+}
+
+#wid-hei{
+    background-color: blueviolet;
+    /* Default value of the height and Width: auto */
+    width: 500px;
+    height: 60%; 
+
+    /* one type of constrain */
+    /* max-width: 700px; */
+    max-height: 300px;
+    /* min-width: ;
+    min-height: ; */
+}

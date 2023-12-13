@@ -1,0 +1,41 @@
+/* Syntex: Elemrnt:<class-name> */
+
+body {
+    font-size: 23px;
+}
+
+/* Select the first child */
+li:first-child {
+    color: red;
+}
+
+li:last-child {
+    color: pink;
+}
+
+/* Random-Number */
+li:nth-child(4) {
+    color: rgb(0, 78, 0);
+}
+
+/* odd:Number */
+li:nth-child(odd) {
+    color: rgb(8, 0, 255);
+}
+
+/* even-Number */
+li:nth-child(even) {
+    color: rgb(255, 0, 238);
+}
+
+/* partten:  */
+li:nth-child(3n+8) {
+    list-style-type: armenian;
+    list-style-position: inside;
+    color: white;
+    background-color: green;
+}
+
+input:focus {
+    border: 3px solid red;
+}

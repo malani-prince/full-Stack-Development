@@ -1,0 +1,25 @@
+#overflow{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    margin: 40px;
+    padding: 30px;
+
+    background-color: whitesmoke;
+    border: 1px solid black;
+    width: 800px;
+    height: 800px;
+
+    /* default */
+    overflow: visible;
+
+    /* Remove the below text */
+    overflow: hidden;
+
+    /* One scroll button is pop up */
+    overflow: scroll;
+
+    /* similar to scroll */
+    overflow: auto;
+
+}

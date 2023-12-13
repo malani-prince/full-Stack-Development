@@ -1,0 +1,79 @@
+.main-container {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p, li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+/* ------- Grid-Element Introduction ------- */
+
+.grid-element {
+    background-color: rgb(190, 186, 186);
+    padding: 20px;
+    column-gap: 20px;
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: lightcyan;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* ------- Grid-Inline-Element Introduction ------- */
+
+.grid-inline-element {
+    row-gap: 20px;
+    /* display: grid-inline; */
+    display: inline-grid;
+    /* grid-template-columns: auto auto auto; */
+    background-color: rgb(190, 186, 186);
+    padding: 20px;
+    box-sizing: content-box;
+}
+
+.grid-inline-item {
+    background-color: lightcyan;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* ------- Grid-Line Introduction ------- */
+
+.grid-line-container{
+    background-color: rgb(190, 186, 186);
+    padding: 20px;
+    grid-gap: 20px;
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.line-items{
+    background-color: aqua;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#item1{
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

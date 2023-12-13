@@ -1,0 +1,76 @@
+
+div.font-style{
+    padding: 23px;
+    border: 1px solid black;
+    text-align: justify;
+    width: 420px;
+    border-radius: 34px;
+}
+
+div.font-style h1, div.google-fonts-use h1{
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 26px;
+}
+
+div.font-style p{
+    letter-spacing: 2px;
+    font-weight: 450;
+}
+
+#font-italic{
+    font-style: italic;
+}
+
+#font-bold{
+    font-style: bold;
+}
+
+#font-variant{
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+/* Google font use */
+div.google-fonts-use{
+    padding: 23px;
+    border: 1px solid black;
+    text-align: justify;
+    width: 420px;
+    border-radius: 34px;
+}
+
+#title2{
+    font-size: 29px;
+    background-color: rgb(202, 182, 223);
+    width: 466px;
+    text-align: center;
+}
+
+#google-1{
+    text-align: justify;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Marck Script', cursive;
+}
+
+/* Import font file using CSS */
+
+@font-face{
+    font-family: abc;
+    src: url('../Fonts/Borel-Regular.ttf');
+}
+
+#google-2{
+    text-align: justify;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+
+    /* If amy browser can't support the this fonts then add the More font family name after comma */
+    font-family: abc;
+    font-style: italic;
+}

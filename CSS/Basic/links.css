@@ -1,0 +1,40 @@
+#title{
+    font-size: 22px;
+    font-weight: 12px;
+    text-align: center;
+    text-decoration: solid;
+}
+
+div.links{
+    border: 1px solid black;
+    border-radius: 23px;
+    padding: 13px;
+    width: 450px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Flow must be the: link -> visited -> hover -> active */
+
+
+a:link{
+    color: yellow
+}
+
+a:visited{
+    color: rgb(0, 0, 0);
+}
+
+a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+a:active{
+    color: red;
+}
+
+

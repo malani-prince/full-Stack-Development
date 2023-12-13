@@ -1,0 +1,52 @@
+#wrapper{
+    background-color: aquamarine;
+
+    padding: 20px;
+    margin: 20px;
+
+    /* scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() */
+    transform: matrix(1, -0.2, 0, 1, 0, 0);
+}
+
+a{
+    text-decoration: none;
+    background-color: lightcoral;
+    padding: 10px 20px;
+    color: white;
+
+
+    /* transform */
+    /* From the x-axis and y-axis */
+    /* where to use: change on hover */
+    transform: translate(50px,  20px);
+    display: inline-block;
+
+    /* rotate: */
+    /* transform: rotate(20deg); */
+    /* NEGATIVE value should be possible */
+    /* transform: rotate(-20deg); */
+
+    /* scale */
+    /* transform: scale(2, 3); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(2); */
+    /* transform: scaleZ(3); */
+
+    /* Skew
+    /* transform: skew(20deg, 30deg );
+    transform: skewX(20px);
+    transform: skewY(20px); */ 
+
+    /* change the rotation partten */
+    transform-origin: left;
+
+    /* metrix */
+    /* scaleX, skewY, skewX, skewY, translateX, translateY,*/
+    transform: matrix();
+}
+
+/* 
+a:hover{
+    display: inline-block;
+    transform: scale(1.2, 2.3);
+} */

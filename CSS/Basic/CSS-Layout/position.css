@@ -1,0 +1,45 @@
+#parent {
+    border-radius: 6px;
+    border: 2px solid rebeccapurple;
+    display: block;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box {
+    border: 1px solid black;
+
+    /* position property */
+    /* position: static; (default)    */
+
+    position: relative;
+    /* top: 20px; */
+
+    /* position: absolute; */
+
+    /* position: fix; */
+
+    position: sticky;
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.box-1{
+    top: 30px;
+}
+/*
+.box-2{
+    top: 90px;
+}
+
+.box-3{
+    top: 150px;
+} 
+
+.box-4{
+    top: 180 px;
+}  */

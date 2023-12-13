@@ -1,0 +1,21 @@
+#cover{
+    border: 2px solid black ;
+    height: 200px;
+    width: 200px;
+    margin: 150px;
+}
+
+#content{
+    height: 200px;
+    width: 200px;
+    background-color: yellowgreen;
+
+    /* perspective ---> Distance from the Top level */
+    /* perspective-origin ---> from the origin (change the center value) */
+    /* Dont put the comma in this */
+    /* x-axis, y-axis, z-axis, degree */
+    /* transform: perspective(300px) rotate3d(20, 20, 20, 120deg); */
+    transform: perspective(300px) rotate3d(20, -20, 20, 90deg);
+
+    
+}

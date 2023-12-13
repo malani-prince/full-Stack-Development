@@ -1,0 +1,32 @@
+img{
+    width: 200px;
+    
+    /* Blur */
+    /* filter: blur(10px); */
+
+    /* % value take */
+    /* filter: brightness(); */
+
+    /* % value take */
+    /* filter: contrast(); */
+
+    /* hotizontal - vertial - blur - color */
+    /* filter: drop-shadow(8px 8px 5px red); */
+
+    /* Black-and-white (%) */
+    /* filter: grayscale(20); */
+
+    /* Hue */
+    /* filter: hue-rotate(90deg); */
+
+    /* Invert */
+    filter:  invert(100%);
+
+    /* opacity */
+    filter: opacity(10%);
+
+    /* Saturate */
+    filter: saturate();
+
+    /* filter: url(../Images/BG-1.png);/ */
+}

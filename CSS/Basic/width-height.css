@@ -1,0 +1,24 @@
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#one{
+    border: 1px solid red;
+
+    /* Does not leave there place */
+    box-sizing: border-box;
+
+    /* Leave the space */
+    box-sizing: content-box;
+}
+
+#two{
+    border: 1px solid red;
+}
+
+#three{
+    border: 1px solid red;
+}

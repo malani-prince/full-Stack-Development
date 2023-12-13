@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advanced-selectors</title>
+    <link rel="stylesheet" href="./advanced-selectors.css">
+</head>
+
+<body>
+    <ol>
+        <li>Type Selectors</li>
+        <li>Id Selectors</li>
+        <li>class Selectors (only one id for the one element and no repeate)</li>
+        <li>class Selectors</li>
+        <li>pseudo class Selectors (a: hover{ } )</li>
+        <li>pseudo element Selector (a:: first-line{ } )</li>
+        <li>Attribute Selector <strong>(New)</strong></li>
+        <li>universal Selector (*{} --> apply on the whole system)</li>
+        <li>Combinatory Selector
+            <ul>
+                <li>Descendant Combinatory (Child at any stage)</li>
+                <li>Child Combinatory (direct child selector)</li>
+                <li>Adjacent Combinatory (after the anyelement)</li>
+                <li>General Combinatory (all with the same level)</li>
+                <li>Add Combinatory (seprate through comma(,))</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div>
+        <p id="title">Attribute Selector</p>
+        <p id="desc">- link belongs to below specified link, the color of that link will be red</p>
+        <p id="syntex"><strong>Syntex-1:</strong><br>
+            a[href = "https://example.com"]{<br>
+            color: red; <br>
+            }
+        </p>
+        <p id="syntex"><strong>Syntex-2:</strong><br>
+            inpuy[type = "text"]{<br>
+            color: red; <br>
+            }
+        </p>
+
+        <div class="Practical-1">
+            <div>
+                <h3>Practical</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corrupti eius, harum officiis quam
+                    cum eaque itaque praesentium voluptas doloribus necessitatibus veniam voluptatibus quia temporibus
+                    dolor ipsum ullam expedita qui sed sunt adipisci unde? Porro nam nostrum rem illum iste sint quae
+                    eaque consectetur dolorem quo, dicta est tempore unde corrupti! Consequatur mollitia non ad omnis
+                    distinctio aperiam asperiores? Quaerat similique voluptate modi amet quis, corporis repudiandae
+                    illum excepturi sed officia iure pariatur deleniti aliquid blanditiis incidunt quo, atque neque
+                    quod! Iusto, magnam odit explicabo minima minus praesentium neque! Ab assumenda sint id quidem. Sunt
+                    sed sint distinctio impedit facere!
+                </p>
+                <ul>
+                    <li>list</li>
+                    <li id="list2">list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li class="list5">list <a href="https://www.google.com">Google</a></li>
+                    <li class="list5">list</li>
+                    <li>list <a href="">Yahoo</a></li>
+                    <li>list</li>
+                </ul>
+            </div>
+        </div>
+        <a href="">Outside Link</a>
+
+    </div>
+
+    <div>
+
+        <p id="title">Combinatory Selector</p>
+<!-- Just After Child is  -->
+        <p id="sub">1. Descendant Combinatory (Child at any stage)</p>
+
+        <p id="desc">- Select the Specific Child node from the webpage</p>
+        <p id="syntex"><strong>Syntex:</strong><br>
+            .red-p span {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: green;<br>
+            }
+        </p>
+        <hr>
+        <p id="sub">2. Child Combinatory (Direct Child Select)</p>
+        <p id="desc">- Direct Child </p>
+        <p id="syntex"><strong>Syntex:</strong><br>
+            .red-p > span {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: green;<br>
+            }
+        </p>
+        <hr>
+        <p id="sub">3. Adjacent Combinatory (right after sibling)</p>
+        <p id="desc">- element that are on the same level and next after the specific level </p>
+        <p id="syntex"><strong>Syntex:</strong><br>
+            .red-p + span {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: green;<br>
+            }
+        </p>
+        <hr>
+        <p id="sub">4. General sibling</p>
+        <p id="desc">- all element at the same level </p>
+        <p id="syntex"><strong>Syntex:</strong><br>
+            .red-p + span {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: green;<br>
+            }
+        </p>
+        <hr>
+        <p id="sub">4. Add selector</p>
+        <p id="syntex"><strong>Syntex:</strong><br>
+            .red-p + span {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: green;<br>
+            }
+        </p>
+    </div>
+
+    <div id="practical-2">
+
+    </div>
+</body>
+
+</html>

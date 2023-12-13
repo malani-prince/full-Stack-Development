@@ -1,0 +1,44 @@
+#title{
+    font-size: 80px;
+    text-align: center;
+    font-weight: 200;
+    width: 600px;
+}
+
+@font-face{
+    font-family: abc;
+    src: url('./Fonts/Borel-Regular.ttf');
+}
+div#units{
+    margin: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 27px;
+    width: 600px;
+    border: 2px solid black;
+}
+
+p#des{
+    background-color: rgb(249, 198, 198);
+}
+
+div#parent-child{
+    margin: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 27px;
+    width: 600px;
+    border: 2px solid black;
+    font-family: abc;
+}
+
+div#parent-child p {
+    border: 1px solid rgb(255, 0, 0);
+    /* width: 10cm; */
+    /* width: 2px; */
+}
+
+div#parent-child div#child p{
+    border: 1px solid rgb(0, 247, 189);
+    /* width: 2in; */
+}

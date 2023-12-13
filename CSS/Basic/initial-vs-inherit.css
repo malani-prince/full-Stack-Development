@@ -1,0 +1,22 @@
+body{
+    font-size: 30px;
+}
+
+#green{
+    color: red;
+}
+
+#blue{
+    color: green;
+}
+
+
+/* By default css value */
+#initial{
+    color: initial;
+}
+
+/* Parent color it take and Use */
+#inherit{
+    color: inherit;
+}   

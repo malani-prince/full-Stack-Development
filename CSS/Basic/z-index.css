@@ -1,0 +1,53 @@
+/* Work when the Postion is define as a Relative, absolute, fix */
+
+#parent {
+    background-color: powderblue;
+    border: 2 px solid black;
+    margin-top: 20px;
+    padding: 20px;
+    width: 5000px;
+    height: 1000px;
+    display: flex;
+}
+
+#cont {
+    background-color: papayawhip;
+    margin-right: 20px;
+    padding: 20px;
+    width: 5000pxpx;
+    height: 1000px;
+}
+
+#one {
+    margin: 10px;
+    background-color: green;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+#two {
+    margin: 10px;
+    background-color: blue;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 70px;
+    left: -250px;
+    z-index: 4;
+}
+
+#three {
+    margin: 10px;
+    background-color: black;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 140px;
+    left: -490px;
+    z-index: 7;
+}

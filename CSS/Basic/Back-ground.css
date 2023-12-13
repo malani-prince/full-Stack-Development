@@ -1,0 +1,51 @@
+    /* #bg{
+            background-color: rgb(164, 246, 246);
+        }  */
+        body{
+            background-color: rgb(232, 166, 166);
+        }
+        #bg{
+            background-image: url(../Images/galaxy-11098_1920.jpg);
+
+            /* background-repeat:  Default is Repeat */
+            background-repeat:  no-repeat;
+
+            /* Only x-axix Repeted */
+            /* background-repeat: repeat-x; */
+
+            /* Only x-axix Repeted */
+            /* background-repeat: repeat-y; */
+
+            /* Background-position:  */
+            /* background-position: right right; */
+            /* background-position: right top; */
+            /* background-position: right center; */
+            /* background-position: bottom bottom; */
+            /* background-position: bottom top; */
+            /* background-position: bottom center; */
+            /* background-position: center center; */
+            /* background-position: center top; */
+            /* background-position: center right; */
+
+            /* VAlue in pixcel */
+            /* background-position:50px 100px ; */
+        
+            /* value in Perentage */
+            background-position: 5% 10%;
+
+            /* Background-size */
+            /* background-size: 1700px 700px; */
+            /* background-size: 100% 100%; ->fill the Div but image hight and width go distorted */
+            /* background-size: cover;  -> Some portion will be cut */ 
+            /* background-size: contain; -> Do not Cut any portion */
+            /* background: rgb(232, 166, 166) url(../Images/IMG_4840.jpg) no-repeat fixed 100% 100%; */
+
+            /* Background Static just text in Moving for that you have to use the background-attachments: fixed*/
+            /* (Default value) background-attachment: scroll; */
+            background-attachment: fixed;
+
+
+            /* Multiple Background: */
+            
+
+        }

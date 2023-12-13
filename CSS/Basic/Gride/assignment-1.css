@@ -1,0 +1,7 @@
+.container{
+    display: grid;
+}
+
+#level-1{
+    grid: auto-flow / 1fr 1 fr 1fr;
+}

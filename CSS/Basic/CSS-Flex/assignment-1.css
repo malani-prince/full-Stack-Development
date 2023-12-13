@@ -1,0 +1,118 @@
+.main-container {
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 15px;
+    margin: 2px;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-size: 17px;
+}
+
+/* ------------------ Layer - 1  ------------------ */
+
+.box-layer-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+}
+
+/* ---- Inside Box 1 ---- */
+
+.inside-box-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+}
+
+.inside-layer-box-1 {
+    background-color: azure;
+    color: black;
+    width: 50%;
+    height: 35px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+/* ---- Inside Box 2 [1 - 4] ---- */
+
+.inside-layer-box-2 {
+    background-color: azure;
+    color: black;
+    width: 50%;
+    height: 35px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.inside-box-2 {
+    background-color: rgb(84, 196, 204);
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* ---- Inside Box 3 ---- */
+
+.inside-layer-box-3 {
+    background-color: azure;
+    color: black;
+    width: 50%;
+    height: 35px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.inside-box-3 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.layers-1 {
+    background-color: rgb(84, 196, 204);
+    color: white;
+    width: 50%;
+    height: 150px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+/* ------------------ Layer - 2 [1 - 4] ------------------ */
+
+.box-layer-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+}
+
+.layers-2 {
+    background-color: rgb(84, 196, 204);
+    color: white;
+    width: 50%;
+    height: 35px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+/* ------------------ Layer - 3 [1 - 5] ------------------ */
+
+.box-layer-3 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+}
+
+.layers-3 {
+    background-color: rgb(84, 196, 204);
+    color: white;
+    width: 50%;
+    height: 20px;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 3px;
+}

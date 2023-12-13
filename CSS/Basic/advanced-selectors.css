@@ -1,0 +1,53 @@
+#title{
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    width: 70%;
+}
+
+/* Id Selector */
+#desc{
+    font-size: 14px;
+}
+
+#syntex{
+    font-size: 15px;
+}
+
+#sub{
+    color: rebeccapurple;
+    font-size: 18px;
+}
+
+/* Class Selector */
+.list5{
+    color: red;
+}
+
+/* Pseudo selector */
+a:hover{
+    text-decoration: dotted;
+}
+
+/* Pseudo Element */
+div.Practical-1::first-line{
+    color: aquamarine;
+}
+
+/* aatriute Selector */
+a[href="https://www.google.com"]{
+    color: blue;
+}
+
+/* universal selector
+*{
+
+} */
+
+/* Combinator selector */
+
+/* 1. Adjesent  */
+
+div#practical-2{
+    
+}

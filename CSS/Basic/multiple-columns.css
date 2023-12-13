@@ -1,0 +1,17 @@
+div{
+    column-count: 3;
+    column-gap: 50px;
+    column-rule-style: solid;
+    column-rule-width: 2px;
+    column-rule-color: red;
+    text-align: center;
+    column-width: 300px;
+
+    /* Combination */
+    column-rule: 1px solid red;
+}
+
+h1{
+    column-span: all;
+}
+

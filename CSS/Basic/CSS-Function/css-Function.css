@@ -1,0 +1,35 @@
+/* how to declare veriable in css */
+:root{
+    --primary-color: red;
+    --btn-color: blue;
+    --text-color: white;
+}
+
+
+#fun{
+    background-color: aqua;
+
+    /* varrys */
+    width: 70%;
+    height: 300px;
+
+    /* calc function use */
+    width: calc(100% - 200px);
+}
+
+a{
+    text-decoration: none;
+    font-size: 23px;
+    padding: 10px 30px;
+    margin: 30px;
+    background-color: blueviolet;
+    color: white;
+}
+
+#f-use{
+    margin: 30px;
+    text-align: justify;
+    font-size: 34px;
+    background-color: black;
+    color: var(--primary-color);
+}

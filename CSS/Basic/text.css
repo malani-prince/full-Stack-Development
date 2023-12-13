@@ -1,0 +1,127 @@
+#title{
+    text-align: center;
+    font-size: 23px;
+    color: rgb(177, 95, 51);
+}
+
+div.text-pro{
+    width: 500px;
+    border: 1px solid black;
+    color: blueviolet;
+    text-align: justify;
+    padding: 20px;
+
+    /* direction: right to left */
+    /* direction: rtl; */
+    /* direction: left to right */
+    direction: ltr;
+}
+
+#span-1{
+    color: rgb(246, 0, 0);
+
+    /* Under line for the Text decoration */
+    text-decoration: underline;
+}
+
+#span-2{
+    color: rgb(37, 154, 84);
+
+    /* text-transform */
+    text-transform: uppercase;
+}
+
+#img-1{
+    border: 1px solid red;
+    vertical-align: top ;
+    width: 100px;
+}
+
+#img-2{
+    border: 1px solid red;
+    vertical-align: -webkit-baseline-middle ;
+    width: 100px;
+}
+
+#img-3{
+    border: 1px solid red;
+    vertical-align: bottom ;
+    width: 100px;
+}
+
+#line-height-text{
+    color: brown;
+    line-height: 15px;
+}
+
+#span-3{
+    color: blue;
+}
+
+#span-4{
+    color: rgb(60, 146, 117);
+    line-height: 34px;
+}
+
+#indent{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    text-indent: 50px;
+}
+
+
+#letter-spacing-text{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    text-indent: 50px;
+    letter-spacing: 2px;
+}
+
+#word-spacing-text{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    text-indent: 50px;
+    word-spacing: 8px;
+}
+
+#white-spacing-text{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    word-spacing: 8px;  
+    /* white-space: pre; */
+    white-space: nowrap;
+    overflow: auto;
+}
+
+#desh-at-the-end{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    overflow: auto;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+
+#shadow{
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+    border: 1px solid black;
+    overflow: auto;
+    font-size: 24px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+
+    /* shadow */
+    /* Horizontal -> vertical -> blur -> color */
+    text-shadow: 2px 4px 2px rgb(187, 13, 42);
+}

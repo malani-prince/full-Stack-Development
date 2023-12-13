@@ -1,0 +1,38 @@
+{
+    "cSpell.words": [
+        "amet",
+        "andar",
+        "animatemodal",
+        "awsom",
+        "Awsome",
+        "badhi",
+        "banse",
+        "consectetur",
+        "elegible",
+        "elit",
+        "Eudora",
+        "Favourite",
+        "jetali",
+        "kahevase",
+        "lightgray",
+        "Malani",
+        "Probagation",
+        "Proulx",
+        "qwertyuiop",
+        "Wendig",
+        "wght",
+        "Wisper",
+        "Wohoo",
+        "yehh",
+        "ZXCVBNM"
+    ],
+    "cSpell.language": "en,en-US",
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:Full_Stack}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
+}

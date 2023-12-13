@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0 20px 30px 0;
+    line-height: 1.4;
+}
+
+.flex-container {
+    width: 100%;
+    height: 500px;
+    border: 2px solid slateblue;
+    /* display: block; (horizontal bloacks)*/
+    /* display: flex; (Vertical Block)*/
+    display: flex;
+
+    /*------------------------ Flex-Direction property /*------------------------*/
+    /* change the flext row to columns manner */
+    /* flex-direction: column; */
+    /* flex-direction:column-reverse; */
+    /* flex-direction:row-reverse; */
+    /* flex-direction:row; */
+
+    /*------------------------ Flex-Wrap Property  /*------------------------*/
+    /* flex-wrap: nowrap; (it can not break the box and does not go in the new line insted it strech the size of the box.)*/
+    /* flex-wrap: wrap; (when the overflow hit at that moment is come to the new line) */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: wrap; */
+
+    /*/*------------------------ Align-Content (Space not Devided) /*------------------------*/
+    /* align-content: baseline; */
+    /* align-content:center; */
+    /* align-content: last baseline; */
+    /* align-content: flex-end; */
+    /* align-content: flex-start; */
+    /* align-content: center; */
+    /* align-content: stretch; (For the streach you have to comment or delte the height ) */
+    /* align-content: stretch; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: space-evenly; */
+
+    /*/*------------------------ Align-Items (Space Also Devided) /*------------------------*/
+    /* align-items: center; */
+    /* align-items: space-around; */
+
+    /*------------------------ Flex-Flow  ------------------------*/
+    /* <'flex-direction'> || <'flex-wrap'> */
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    width: 75px;
+    height: 75px;
+    background-color: lightskyblue;
+    border: 2px solid darkblue;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+#flex-item-1 {
+    /* increse the size of the container (Control the Width) */
+    /* flex-basis: 200px; */
+
+    /* Grow the size of the Content-Box */
+    /* flex-grow: 2; */
+
+    /* Flex-shrink (no negative value) (Flex-wrap must be comment out)*/
+    /* flex-shrink: 4; */
+
+    /* Align-Self (Select the perticular Element) */
+    /* align-self: center; */
+
+    /*Shortcut: [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+    /* flex: 2 4 250px; */
+
+    background-color: lightpink;
+}
+
+#flex-item-2 {
+    /* align-self: baseline; */
+    background-color: lightblue;
+}
+
+#flex-item-3 {
+    /* align-self: self-end; */
+    background-color: lightseagreen;
+    order: 5;
+}
+
+#flex-item-4 {
+    /* align-self: flex-end; */
+    background-color: lightgray;
+}
+
+#flex-item-5 {
+
+    /* order: 1; */
+    background-color: lightsalmon;
+}
+
+/* #flex-item-6{
+    background-color: lightcoral;
+}
+
+#flex-item-7{
+    background-color: rgb(82, 190, 190);
+}
+
+#flex-item-8{
+    background-color: lightslategray;
+}
+
+#flex-item-9{
+    background-color: lightsteelblue;
+}
+
+#flex-item-10{
+    background-color: lightgreen;
+} */

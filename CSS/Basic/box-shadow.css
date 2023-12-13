@@ -1,0 +1,22 @@
+div{
+    margin: 59px;
+    padding: 20px;
+    border: 1px solid green;
+    width: 500px;
+    background-color: rgb(168, 190, 57);
+    
+    /* Negative pixcel value Possible */
+
+    /* Outside the Box */
+    /* Box-shadow flow: x-axis --> y-axis --> Blurness --> sprade-radius Color  */
+    box-shadow: 10px 10px 15px 3px gray;
+    
+    /* Inside the Box */
+    /* Box-shadow flow: x-axis --> y-axis --> Blurness --> sprade-radius Color  */
+    box-shadow: 10px 10px 15px 3px gray inset;
+
+
+    /* Multiple shadow */
+    box-shadow: 10px 10px 15px 3px gray, 10px 10px 15px 3px red inset;
+
+}

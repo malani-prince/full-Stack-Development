@@ -1,0 +1,46 @@
+div {
+    border: 1px solid black;
+}
+
+.container {
+    height: 8000px;
+    background-color: aqua;
+    position: relative;
+}
+
+img {
+    margin: 20px;
+}
+
+/* When we use the relative position it aquire sapce from the both side and go down side */
+/* 4 property is use: top. bottom, left, right */
+/* Gap maintain */
+/* Current window is the base */
+.img1{
+
+}
+.img2 {
+    position: relative;
+    top: 100px;
+    /* left: 200px; */
+}
+
+/* when we have to Overlap */
+
+/* Trick: closest parent mark as relative  and child position is going to be absolute */
+/* aquire the space */
+.img3 {
+    position: sticky;
+    top: 100px;
+}
+
+.img4 {
+    position: fixed;
+}
+
+
+.box{
+    height: 1000px;
+    background-color: rebeccapurple;
+
+}

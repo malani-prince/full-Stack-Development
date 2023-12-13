@@ -1,0 +1,86 @@
+.flex-container {
+    background-color: aqua;
+    display: flex;
+
+    /* flex-direction: column-reverse; */
+    /* flex-direction: column;
+    flex-direction: row-reverse; */
+    /* flex-direction: row; */
+
+    /* do not adjust */
+    /* flex-wrap: wrap; */
+
+    /* Adjust in the parent div */
+    /* flex-wrap: nowrap; */
+
+    /* rev-wrap */
+    /* flex-wrap: wrap-reverse; */
+
+    /* row wrape */
+    /* flex-flow: row; */
+    /* flex-flow: row wrap; */
+
+    /* justify-content */
+    /* justify-content: space-around; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+
+    /* align */
+
+    height: 70vh;
+
+    /* regular base on the div (Default) */
+    /* align-items: stretch; */
+
+    /* center and div size change */
+    /* align-items: center; */
+
+    /* on the top */
+    /* align-items: first baseline; */
+
+    /* align-items: start; */
+    /* align-items: flex-start;  */
+
+
+    /* Align Content (Vertical ) */
+    /* align-content: stretch; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: start; */
+    /* align-content: end; */
+
+
+
+}
+
+.flex-child {
+    background-color: green;
+    margin: 30px;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+/* change the order of the content */
+#one {
+    /* cover the extra space */
+    /* flex-grow: 1; */
+    /* flex-shrink: 3; */
+
+    /* define the initial space of the content */
+    /* flex-basis: 300px; */
+    align-self: flex-start;
+
+}
+
+#two {
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    align-self: center;
+
+}
+
+#three {
+    /* flex-grow: 1; */
+    align-self: flex-end;
+}

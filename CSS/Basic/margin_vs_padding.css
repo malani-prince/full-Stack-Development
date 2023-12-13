@@ -1,0 +1,39 @@
+#title{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box-1{
+    margin: 30px;
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+}
+
+.box-2{
+    padding: 30px;
+    background-color: burlywood;
+    height: 100px;
+    width: 100px;
+}
+
+
+.wrapper-2{
+    background-color: red;
+}
+
+.box-1-1{
+    margin: 30px;
+    background-color: rgb(44, 194, 86);
+    height: 100px;
+    width: 100px;
+}
+
+.box-2-1{
+    padding: 30px;
+    background-color: rgb(163, 101, 20);
+    height: 100px;
+    width: 100px;
+}
+

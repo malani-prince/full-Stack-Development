@@ -1,0 +1,80 @@
+/* Combine the multiple Elements */
+p {
+    color: green;
+}
+
+/* 
+li{
+    list-style-type: circle;
+} */
+
+/* Select the class elements */
+.List-desc-1{
+    list-style-type: square;
+    color: red;
+    font-weight: bold;
+}
+
+/* Selct The element.class_name */
+span.special, li.List-desc-1{
+    color: orange;
+    font-weight: bold;
+}
+
+/* descendant combinator use */
+
+li em {
+    color: royalblue;
+}
+
+
+/* Adjacent Combinator : h1 and p both will change,None of other will */
+/* h1 + p {
+    font-size: 200%;
+} */
+
+
+/* Psudo class Selector */
+a:hover{
+    color: saddlebrown;
+    text-decoration: none;
+}
+
+body h1+p .special {
+    color: rgb(123, 200, 148);
+    background-color: black;
+    padding: 5px;
+}
+
+/* ID selector */
+#my-first-id{
+    color: yellow;
+    background-color: black;   
+}
+
+p#my-first-id{
+    color: white;
+}
+
+/* Select the multiple code from the HTML code */
+
+li[class]{
+    font-size: 150%;
+}
+
+/* for selecting the Single Class from the HTML code */
+li[class="a"]{
+    color: rosybrown;
+}
+/* Condition base other then a all the class Select and Changes happens*/
+li[class~="a"]{
+    color: rosybrown;
+}
+
+/* Universal Selector */
+*{
+    list-style-type: none;
+}
+/* a {
+    color: green
+} */

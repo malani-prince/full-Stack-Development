@@ -1,0 +1,30 @@
+#padding-intro{
+    border: 1px solid black;
+    text-align: justify;
+    /* padding-top: 7px;
+    padding-right: 16px;
+    padding-bottom: 7px;
+    padding-left: 14px; */
+    
+    /* padding-top: 7%;
+    padding-right: 16%;
+    padding-bottom: 7%;
+    padding-left: 14%;
+    */
+
+    /* flow: Top - right - Bottom - left */
+    /* padding: 133px 124px 325px 40px; */
+
+    /* for the only 3 value: Top - (left-right) - bottom */
+    /* padding: 13px 14px 325px; */
+
+    /* for the only 2 value: (Top-bottom) - (left-right)*/
+    /* padding: 12px 50px ; */
+    
+    /* for the only 1 value: All change*/
+    padding: 122px  ;
+
+
+
+
+}

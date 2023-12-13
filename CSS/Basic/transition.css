@@ -1,0 +1,30 @@
+#div1{
+    background-color: greenyellow;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin:  150px;
+    transition-property: all;
+    /* transition-duration: 0.20s;
+    transition-delay: 200ms; */
+
+    /* Spped is linear */
+    /* Manually DEfine the All things */
+    /* transition-timing-function: ease; */
+    /* transition-timing-function: ease-in; */
+    /* transition-timing-function: ease-out; */
+    transition-timing-function: ease-in-out;
+
+    /* Combination */
+    /* property, Duration, timing-function, delay */
+    transition: width 2s, height 3s;
+}
+
+#div1:hover{
+    width: 200px;
+    height: 300pxs;
+    /* background-color: antiquewhite; */
+    /* Smooth animation effect */ 
+    /* transition: 0.4s; */
+}
+

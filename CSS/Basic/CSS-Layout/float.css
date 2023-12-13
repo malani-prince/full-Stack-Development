@@ -1,0 +1,32 @@
+body{
+    margin: 0 auto;
+    width: 100%;
+}
+
+#box{
+    /* float: right; */
+    float: left;
+
+
+    /* clear property */
+
+
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 9%; 
+    background-color: #eee;
+    padding: 20px ;
+}
+
+.special{
+    background-color: lightblue;
+    padding: 15px;
+    color: #fff;
+}
+
+
+/* Clear property use for the starting new paragraph from the bottom of the float properrty */
+.clear-class{
+    clear: right;
+}

@@ -1,0 +1,31 @@
+#title{
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+    margin: 14px;
+    padding: 12px;
+    
+    /* make it proper table Structure like Excel */
+    /* border-collapse: collapse; */
+
+    /* make the pipeline structure  */
+    border-collapse: separate;
+
+    border-spacing: 3px;
+}
+
+th{
+    background-color: black;
+    color: rgba(178, 207, 171, 0.863);
+}
+
+td{
+    background-color:  rgba(178, 207, 171, 0.863);;
+    color: black
+}

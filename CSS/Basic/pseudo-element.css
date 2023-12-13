@@ -1,0 +1,27 @@
+/* syntex:  selector::pseudo-element */
+
+h1::before{
+    content: url(../Images/dp.drawio.png);
+}
+
+h1::after{
+    content: " Added After";
+}
+
+p::first-letter{
+    color: red;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p::first-line{
+    color: green;
+    font-family: cursive ;
+}
+
+
+/* change the Selection portion () */
+::selection{
+    color: pink;
+    background-color: yellow;
+}

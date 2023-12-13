@@ -1,0 +1,81 @@
+/* Rectangular Box: How that Box Response that base on the CSS property and every element having the Display property */
+
+/* Total 4 type of Display property is possible */
+/* Block */
+/* inline */
+/* inline-block */
+/* none  */
+
+/* div, p, h1-h6, : Display Property Default value is BLock */
+
+/* a, imgl, span : Inline Element  */
+
+/* WE can change the Display Property */
+/* 
+block
+1. New line
+2. Full width
+3. height and width both can apply
+
+
+inline
+1. no new line
+2. no full width
+3. no height and width
+
+
+Inline-Block
+1. no new line
+2. no full width
+3. Chane have the height and width
+
+ */
+
+div#display-block{
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+
+    /* it Moves to horizontal insted vertical */
+    display: block;
+}
+
+
+/* See the Inline Details */
+div#display-block-inline{
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+
+    /* it Moves to horizontal insted vertical */
+    display: inline-block;
+    margin: 12px;
+}
+
+div#display-none{
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+    margin: 12px;
+    
+    
+    /* Can not accupied the space */
+    /* display: none; */
+
+    /* can occupoed the space */
+    visibility: hidden;
+
+}
+
+
+h1{
+    background-color: palegoldenrod;
+    border: 1px solid black;
+
+    display: inline;
+}
+
+span{
+    background-color: aqua;
+    border: 1px solid black;
+}

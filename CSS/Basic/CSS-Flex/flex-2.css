@@ -1,0 +1,72 @@
+.container {
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(205, 131, 131);
+    padding: 4px;
+    margin: 2px;
+    display: flex;
+    height: 400px;
+
+    flex-wrap: nowrap;
+    /* flex-wrap: wrap; */
+
+    flex-direction: column;
+    flex-direction: row;
+
+    /* Horizontaly (main axis) Center */
+    justify-content: center;
+    justify-content: end;
+    justify-content: start;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: center;
+    justify-content: start;
+
+    /* Align-Item */
+    align-items: center;
+    align-items: start;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: start;
+    /* align-items: stretch; if we want to use strach then in the child there is no hight property exist */
+
+    /* Align-Content */
+    align-content: start;
+    align-content: end;
+    align-content: center;
+}
+
+.box {
+    border: 3px solid orange;
+    margin: 2px;
+    /* width: 200px;
+    height: 200px; */
+}
+
+#item1 {
+    /* order: 500; */
+    background-color: antiquewhite;
+    /* flex-shrink: 4; */
+    /* flex-grow: 1; */
+    align-self: center;
+    align-self: flex-end;
+}
+
+#item2 {
+    background-color: azure;
+    /* flex-grow: 1; */
+
+}
+
+#item3 {
+    background-color: lawngreen;
+    /* flex-grow: 1; */
+}
+
+#item4 {
+    /* order: -1; */
+    background-color: aquamarine;
+    /* flex-grow: 1; */
+    /* flex-basis: 400px; */
+}
