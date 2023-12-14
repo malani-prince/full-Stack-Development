@@ -146,6 +146,7 @@
  *                   CallBack Hell Created
  * ----------------------------------------------------- 
 */
+
 // let production = () => {
 //     setTimeout(() => {
 
@@ -202,13 +203,16 @@
 
 /**
  * -----------------------------------------------------
- *                      Promise
+ *                      Promise 
  * -----------------------------------------------------
 */
 
+// ----------- Promise Made -----------
 // 1. Promises made [Flow of the Premises]
-// Two parts
-// Pending order van be  [customer is sitting only]
+//                    |
+//                    |
+//                    \/
+// Pending order van be  [customer is sitting only] [it is simple if...else statement]
 // order something then two condition is possible.
 //
 //      a) Resolve     b) Reject
@@ -251,25 +255,32 @@ let stocks = {
     ]
 }
 
-let isShopeOpen = true
+let isShopOpenOrClose = true
 
+// Made the order
 let order = (time, work) => {
 
-    return new Promise((resolve, reject) => {
-        if (isShopeOpen) {
+    return new Promise(
+        (resolve, reject) => {
+            // Shop open serve ice cream
+            if (isShopOpenOrClose) {
 
-            setTimeout(() => {
-                resolve(
-                    work()
+                setTimeout(() => {
+                    resolve(
+                        work()
+                    )
+                }, time)
+
+            }
+            // Shop is close please try again later
+            else {
+                reject(
+                    console.log("Our Shop is Closed Please visit Again")
                 )
-            }, time)
-
-        } else {
-            reject(
-                console.log("Our shop is close, Please visit again...🥲")
-            )
+            }
         }
-    })
+    )
 }
 
-order(2000, () => console.log(`${stocks.fruits[0]}`))
+// 1. Relation b/w time and work
+order(2000, () => console.log(`${stocks.fruits[0]} was selected....[2s]`))
