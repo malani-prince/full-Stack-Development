@@ -51,6 +51,10 @@
 
 // when we have to work with the Fetch api and Asynchronous we use the await keyword
 
+
+
+
+
 /**
  * -----------------------------------------------------------
  *                        POST Request
@@ -58,37 +62,77 @@
  */
 // for making the "post" Request we need to use the "fetch option"
 
-const createToDo = async (todo) => {
+// const createToDo = async (todo) => {
 
-    let options = {
-        method: "POST",
-        headers: {
-            "content-type": "application/json"
-        },
-        body: JSON.stringify(todo),
-    }
-    let p = await fetch('https://jsonplaceholder.typicode.com/todos/', options)
-    let response = await p.json()
-    return response
-}
-// .then(response => response.json())
-// .then(json => console.log(json))   //Outcome: { title: 'foo', body: 'bar', useId: 1, id: 201 }
+//     let options = {
+//         method: "POST",
+//         headers: {
+//             "content-type": "application/json"
+//         },
+//         body: JSON.stringify(todo),
+//     }
+//     let p = await fetch('https://jsonplaceholder.typicode.com/todos/', options)
+//     let response = await p.json()
+//     return response
+// }
+// // .then(response => response.json())
+// // .then(json => console.log(json))   //Outcome: { title: 'foo', body: 'bar', useId: 1, id: 201 }
 
-const getToDo = async (id) => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + id)
-    let r = await response.json()
-    return r
-}
+// const getToDo = async (id) => {
+//     let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + id)
+//     let r = await response.json()
+//     return r
+// }
 
-const mainFunction = async () => {
-    const todoR = {
-        title: 'harry',
-        body: 'bhai',
-        useId: 1100
-    }
-    let todoReturnObject = await createToDo(todoR)
-    console.log(todoReturnObject)
-    console.log(await getToDo(3))
-}
+// const mainFunction = async () => {
+//     const todoR = {
+//         title: 'harry',
+//         body: 'bhai',
+//         useId: 1100
+//     }
+//     let todoReturnObject = await createToDo(todoR)
+//     console.log(todoReturnObject)
+//     console.log(await getToDo(3))
+// }
 
-mainFunction()
+// mainFunction()
+
+
+
+
+
+/**
+ * ----------------------------------------------------------------
+ *                fetch method & Promise Use                    * --------------------------------------------------------------
+
+ */
+
+// const API_URL = "https://api.github.com/users/malani-prince"
+// async function handlePromise() {
+
+
+//     // *  how fetch work inside with out .then.then 
+
+//     // Working of this code
+//     // 1. saw the await - <wait for the promise resolve in x time> till the process is suspended 
+//     const data = await fetch(API_URL) // fetch return the promise
+
+//     // 1. again await is appears - <wait for the promise resolve in x time> till the process is suspended 
+//     const jsonValue = await data.json()
+
+//     // log to the console 
+//     console.log(jsonValue)
+
+
+//     // *  Work the similar way it is the actual syntax of writing fetch method 
+
+//     // fetch(API_URL)
+//     //     .then(
+//     //         (res) => res.json()
+//     //     )
+//     //     .then(
+//     //         res => console.log(res)
+//     //     )
+// }
+
+// handlePromise()
