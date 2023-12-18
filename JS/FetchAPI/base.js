@@ -8,32 +8,32 @@
 /**
  * javascript can be use for the sending and return the information from  the network, when we needed. (AJAX)
 
- * fetch is the method that allows this kind of functionality in js 
+ * fetch is the method that allows this kind of functionality in js
 
  * let promise = fetch(
-    <url>,
-    [Option] = "<"get", "post", "delete", etc..>")
+   <url>,
+   [Option] = "<"get", "post", "delete", etc..>")
 
- * It Getting the Response in a 2-stage process. 
+ * It Getting the Response in a 2-stage process.
 
  * 1. contain two properties ==> a) status   b) ok
- * 2. After we call the another method to access the body in different formate...  
+ * 2. After we call the another method to access the body in different formate...
  * a) response.text() -> read and return the text
- * b) response.json() -> 
- * 
+ * b) response.json() ->
+ *
 
  */
 
 
 // let url = "https://goweather.herokuapp.com/weather/{city}"
 
-// // p is Promise | 
+// // p is Promise |
 // let p = fetch("https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=REPLACE_ME")
 
 // first then is use for the Check the Status whether the "status" is positive and ok === true.  Outcome: 200 , true
 // stage first is made for checking the server is working properly or not.
 
-// second then is use for the display the Content in json or any formate we want 
+// second then is use for the display the Content in json or any formate we want
 // second then return the Object pass by the first then wether it is a Json or Text
 
 // p.then(
@@ -102,8 +102,9 @@
 
 
 /**
- * ----------------------------------------------------------------
- *                fetch method & Promise Use                    * --------------------------------------------------------------
+ * --------------------------------------------------------------
+ *                fetch method & Promise Use                   
+ * --------------------------------------------------------------
 
  */
 
@@ -111,20 +112,20 @@
 // async function handlePromise() {
 
 
-//     // *  how fetch work inside with out .then.then 
+//     // *  how fetch work inside with out .then.then
 
 //     // Working of this code
-//     // 1. saw the await - <wait for the promise resolve in x time> till the process is suspended 
+//     // 1. saw the await - <wait for the promise resolve in x time> till the process is suspended
 //     const data = await fetch(API_URL) // fetch return the promise
 
-//     // 1. again await is appears - <wait for the promise resolve in x time> till the process is suspended 
+//     // 1. again await is appears - <wait for the promise resolve in x time> till the process is suspended
 //     const jsonValue = await data.json()
 
-//     // log to the console 
+//     // log to the console
 //     console.log(jsonValue)
 
 
-//     // *  Work the similar way it is the actual syntax of writing fetch method 
+//     // *  Work the similar way it is the actual syntax of writing fetch method
 
 //     // fetch(API_URL)
 //     //     .then(
@@ -136,3 +137,6 @@
 // }
 
 // handlePromise()
+
+
+

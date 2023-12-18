@@ -1028,119 +1028,148 @@
 
 */
 
-// Input 
-const p1 = new Promise(
-    (resolve, reject) => {
-        // console.log("this is first")
+// // Input 
+// const p1 = new Promise(
+//     (resolve, reject) => {
+//         // console.log("this is first")
 
-        setTimeout(
-            () => {
-                reject("p1 Fails")
-                // resolve("p1 success")
-            }, 6000)
-    })
+//         setTimeout(
+//             () => {
+//                 reject("p1 Fails")
+//                 // resolve("p1 success")
+//             }, 6000)
+//     })
 
-const p2 = new Promise(
-    (resolve, reject) => {
-        // console.log("this is second")
-        setTimeout(
-            () => {
-                // resolve("p2 success")
-                reject("p2 Fails")
-            }, 5000)
-    })
+// const p2 = new Promise(
+//     (resolve, reject) => {
+//         // console.log("this is second")
+//         setTimeout(
+//             () => {
+//                 // resolve("p2 success")
+//                 reject("p2 Fails")
+//             }, 5000)
+//     })
 
-const p3 = new Promise(
-    (resolve, reject) => {
-        // console.log("this is third")
-        setTimeout(
-            () => {
-                // resolve("p3 success")
-                reject("p3 Fails")
-            }, 2000)
-    })
+// const p3 = new Promise(
+//     (resolve, reject) => {
+//         // console.log("this is third")
+//         setTimeout(
+//             () => {
+//                 // resolve("p3 success")
+//                 reject("p3 Fails")
+//             }, 2000)
+//     })
 
-// * 1. Promise.alls
-// Promise.all(
-//     [
-//         p1,
-//         p2,
-//         p3
-//     ]
-// )
-//     .then(
-//         res => {
-//             console.log(res)
-//         }
-//     )
-//     .catch(
-//         (err) => {
-//             console.error(err)
-//         }
-//     )
+// // * 1. Promise.alls
+// // Promise.all(
+// //     [
+// //         p1,
+// //         p2,
+// //         p3
+// //     ]
+// // )
+// //     .then(
+// //         res => {
+// //             console.log(res)
+// //         }
+// //     )
+// //     .catch(
+// //         (err) => {
+// //             console.error(err)
+// //         }
+// //     )
 
-// * Promise.allSettled | Best Way
-// Promise.allSettled(
-//     [
-//         p1,
-//         p2,
-//         p3
-//     ]
-// )
-//     .then(
-//         res => {
-//             console.log(res)
-//         }
-//     )
-//     .catch(
-//         (err) => {
-//             console.error(err)
-//         }
-//     )
-
-
-// * Promise.race | p3 take 3s after 3s it fails and return the value  at console.
-// Promise.race(
-//     [
-//         p1,
-//         p2,
-//         p3
-//     ]
-// )
-//     .then(
-//         res => {
-//             console.log(res)
-//         }
-//     )
-//     .catch(
-//         (err) => {
-//             console.error(err)
-//         }
-//     )
-
-// * Promise.any | return for the first settled success | p2 take 5s, p1 take 6s, p3 take 2s ==> first change goes to p3 it fails then move to p2 then solve and it resolve it immediately return the result.
-// * all fails => Aggregate Error  //
-// OutCome:
-// [AggregateError: All promises were rejected] {
-//     [errors]: [ 'p1 Fails', 'p2 Fails', 'p3 Fails' ]
-//   }
-
-Promise.any(
-    [
-        p1,
-        p2,
-        p3
-    ]
-)
-    .then(
-        res => {
-            console.log(res)
-        }
-    )
-    .catch(
-        (err) => {
-            console.error(err.errors)
-        }
-    )
+// // * Promise.allSettled | Best Way
+// // Promise.allSettled(
+// //     [
+// //         p1,
+// //         p2,
+// //         p3
+// //     ]
+// // )
+// //     .then(
+// //         res => {
+// //             console.log(res)
+// //         }
+// //     )
+// //     .catch(
+// //         (err) => {
+// //             console.error(err)
+// //         }
+// //     )
 
 
+// // * Promise.race | p3 take 3s after 3s it fails and return the value  at console.
+// // Promise.race(
+// //     [
+// //         p1,
+// //         p2,
+// //         p3
+// //     ]
+// // )
+// //     .then(
+// //         res => {
+// //             console.log(res)
+// //         }
+// //     )
+// //     .catch(
+// //         (err) => {
+// //             console.error(err)
+// //         }
+// //     )
+
+// // * Promise.any | return for the first settled success | p2 take 5s, p1 take 6s, p3 take 2s ==> first change goes to p3 it fails then move to p2 then solve and it resolve it immediately return the result.
+// // * all fails => Aggregate Error  //
+// // OutCome:
+// // [AggregateError: All promises were rejected] {
+// //     [errors]: [ 'p1 Fails', 'p2 Fails', 'p3 Fails' ]
+// //   }
+
+// // Promise.any(
+// //     [
+// //         p1,
+// //         p2,
+// //         p3
+// //     ]
+// // )
+// //     .then(
+// //         res => {
+// //             console.log(res)
+// //         }
+// //     )
+// //     .catch(
+// //         (err) => {
+// //             console.error(err.errors)
+// //         }
+// //     )
+
+
+
+
+/**
+ * functions: 1) Arrow function  2) Higher order function [R]
+ * Array Destructuring [R]
+ * Object Destructuring [R]
+ * rest operator [R]
+ * spread operator [R]
+ * Conditions [R] | ternary operation | && and or | Optional chaining
+ * map | filter | reduce | sort [R]
+ * eventLister [R]
+ * setTimeOut [R]
+ * setInterval [R]
+ * callback | Promises | Promises API [R]
+ * Async Await [R]
+ * try....catch [R]
+ * 
+ * ------------------------
+ * setInterval 
+ * clearTimeOut
+ * Console object
+ * map | filter | reduce | sort
+ * Array Destructuring
+ * Object Destructuring
+ * rest operator
+ * spread operator
+ * try....catch 
+
+ */
