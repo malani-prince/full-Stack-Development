@@ -117,7 +117,6 @@ readFile(
 */
 
 
-
 // *             HTTP
 
 /** HTTP
@@ -143,27 +142,84 @@ server.listen(5000)
 */
 
 
+// *     Event Loops | Await concepts 
+
+/*
+const { readFile, writeFile } = require('fs');
+const { result, template } = require('lodash');
+
+const pathPara = require('path');
+const filePath = pathPara.join(__dirname, 'content', 'temp.txt');
+const secondFile = pathPara.join(__dirname, 'content', 'result-sync-2.txt');
+const util = require('util')
+
+// Built in functionality provided by Utils packages for write the content with Async manner just pass the method inside the Promisify.
+const readFilePromise = util.promisify(readFile)
+const writeFilePromise = util.promisify(writeFile)
+
+const start = async () => {
+    try {
+        const tempData = await readFilePromise(filePath, 'utf-8')
+        const res = await readFilePromise(secondFile, 'utf-8')
+
+        await writeFilePromise(
+            'NodeJS//newFileForTest.txt',
+            `This is the New file`,
+            {flag: "a"}
+        )
+        console.log(tempData, res)
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
+start()
+
+// User define Promises 
+// const getText = (path) => {
+//     return new Promise((reject, resolve) => {
+//         readFile(path, 'utf-8',
+//             (err, data) => {
+//                 if (err) {
+//                     reject(err)
+//                 }
+//                 else {
+//                     resolve(data)
+//                 }
+//             })
+//     })
+// }
+
+
+// getText(filePath)
+//     .then(result => console.log(result))
+//     .catch((err) => console.log(err))
+
+
+// nodemon NodeJS/app.js
 
 
 
-// *       NPM    (10.2.3)
+const http = require('http')
 
-// npm - Global command, comes with node
-// npm --version
+// const server = http.createServer((req, res) => {
+//   res.end('Welcome')
+// })
 
-// * local dependency - use it only this particular project
-// npm i <packageName>    // i ==> Install
+// Using Event Emitter API
+const server = http.createServer()
+// emits request event
+// subscribe to it / listen for it / respond to it
+server.on('request', (req, res) => {
+    res.end('Welcome')
+})
 
-// * Global Dependency - use it in any project
-// npm install -g <packageName>
+server.listen(5000)
 
-// *  package.json - manifest file (store important info about project/package)
-// manual approach (create package.json in the root, create properties etc)
-// npm init (step by step, press enter and skip)
-// npm init -y (everything default)
+*/
 
-const _ = require('lodash')
 
-const items = [1, [2, [3, [4, [5, [6]]]]]]
-const newItems  = _.flattenDeep(items)
-console.log(newItems)
+const { readFileSync, writeFileSync } = require('fs')
+
+

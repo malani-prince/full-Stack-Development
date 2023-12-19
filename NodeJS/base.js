@@ -339,18 +339,269 @@ server.listen(5000)
  */
 
 
+
+
+
 // * ###################################################
-// *       NPM    (10.2.3)
+// *  NPM  (10.2.3) | setup | Install | uninstall | run
 // * ###################################################
 
+/*
 // npm - Global command, comes with node
 // npm --version
 
-// local dependency - use it only this particular project
+// * local dependency - use it only this particular project
 // npm i <packageName>    // i ==> Install
 
-// Global Dependency - use it in any project
+// * Global Dependency - use it in any project
 // npm install -g <packageName>
 
+
+// *  package.json - manifest file (store important info about project/package)
+// manual approach (create package.json in the root, create properties etc)
+// npm init (step by step, press enter and skip)
+// npm init -y (everything default)
+
+
+// * npm i lodash 
+// * npm i bootstrap
+// * npm i nodemon --D
+
+// * run the command:->  
+// npm start : Similar way mention below 
+// npm run dev : [for the set up in packages.json > scripts > Add this command into script object "dev": "nodemon NodeJS\\app.js" > then run this command 
+
+// * how to uninstall packages
+// * npm uninstall bootstrap
+
+// * install the nodemon
+// npm i nodemon
+
+const _ = require('lodash')
+
+const items = [1, [2, [3, [4, [5, [6]]]]]]
+const newItems  = _.flattenDeep(items)
+console.log(newItems)
+*/
+
+
+
+
+
+// * ###########################################################
+// * 1. Event Loop | Async Patterns | Event Emitter and Streams 
+// * 2. Main Concepts
+// * 3. Pre-built code
+// * ###########################################################
+
+
+// * 1.
+/*
+//  Refer the folder [1-event-loops]
+
+// console.log("hello")
+
+
+// Node js Event Loop: 
+// const { readFile } = require('fs')
+// const path = require('path');
+// const filePath = path.join(__dirname, 'content', 'temp.txt');
+
+// console.log("Starting a first Task")
+
+// // Check the file path
+// // readfile is Asynchronous
+// readFile(
+//     filePath,
+//     'utf-8',
+//     (err, results) => {
+//         if (err) {
+//             console.log(err)
+//             return
+//         } else {
+//             console.log(results)
+//             console.log("Complete the Task move further")
+//         }
+//     }
+// )
+
+// console.log("....Starting next Task....")
+
+// console.log("First")
+
+// setTimeout(() => {
+//     console.log("Second")
+// }, 0)
+
+// console.log("third")
+
+
+// Listen is Async 
+const http = require('http')
+
+const server = http.createServer(
+    (req, res) => {
+        console.log('request Event')
+        res.end('Hello World')
+    }
+)
+
+server.listen(5000, () => {
+    console.log("Server Listens on Port: 5000")
+})
+*/
+
+
+// * 2.
+/*
+// it show why we use Async instead Sync 
+// Listen method is Async 
+const http = require('http')
+
+const server = http.createServer(
+    (req, res) => {
+        if (req.url === '/') {
+            res.end("Home Page")
+        } else if (req.url === '/about') {
+            // Blocking Code
+            for (let i = 0; i < 1000; i++) {
+                for (let j = 0; j < 1000; j++) {
+                    console.log(`${i} ${j}`)
+                }
+            }
+            res.end("About section")
+        } else {
+            res.end("error page")
+        }
+    }
+)
+
+server.listen(5000, () => {
+    console.log("Server Listens on Port: 5000")
+})
+*/
+
+
+// * 3.
+/* 
+const { readFile, writeFile } = require('fs');
+const { result, template } = require('lodash');
+
+const pathPara = require('path');
+const filePath = pathPara.join(__dirname, 'content', 'temp.txt');
+const secondFile = pathPara.join(__dirname, 'content', 'result-sync-2.txt');
+const util = require('util')
+
+// Built in functionality provided by Utils packages for write the content with Async manner just pass the method inside the Promisify.
+const readFilePromise = util.promisify(readFile)
+const writeFilePromise = util.promisify(writeFile)
+
+const start = async () => {
+    try {
+        const tempData = await readFilePromise(filePath, 'utf-8')
+        const res = await readFilePromise(secondFile, 'utf-8')
+
+        await writeFilePromise(
+            'NodeJS//newFileForTest.txt',
+            `This is the New file`,
+            {flag: "a"}
+        )
+        console.log(tempData, res)
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
+start()
+
+// User define Promises 
+// const getText = (path) => {
+//     return new Promise((reject, resolve) => {
+//         readFile(path, 'utf-8',
+//             (err, data) => {
+//                 if (err) {
+//                     reject(err)
+//                 }
+//                 else {
+//                     resolve(data)
+//                 }
+//             })
+//     })
+// }
+
+
+// getText(filePath)
+//     .then(result => console.log(result))
+//     .catch((err) => console.log(err))
+
+
+// nodemon NodeJS/app.js
+*/
+
+
+
+
+
+// * ###########################################################
+// * 1. Event - Driven Programming 
+// * 2. Used Heavily in Node.js
+// * ###########################################################
+
+// * Event Emitter
+/*
+//  * EventEmitter
+
+const EventEmitter = require('events')
+
+const customEmitter = new EventEmitter()
+
+customEmitter.on('response', (name, id) => {
+    console.log(`data => name: ${name}  id: ${id} `)
+})
+customEmitter.on('response', () => {
+    console.log("Some other logic")
+})
+
+// Order matter 
+customEmitter.emit('response', 'john', 34)
+
+// not going to print this
+customEmitter.on('response', () => {
+    console.log("Some other logic")
+})
+*/
+
+/*
+
+const http = require('http')
+
+// const server = http.createServer((req, res) => {
+//   res.end('Welcome')
+// })
+
+// Using Event Emitter API
+const server = http.createServer()
+// emits request event
+// subscribe to it / listen for it / respond to it
+server.on('request', (req, res) => {
+    res.end('Welcome')
+})
+
+server.listen(5000)
+
+*/
+
+
+
+
+
+// * ###########################################################
+// * 1. STREAMS : continues data 
+// *   a) Writeable
+// *   b) Readable
+// *   c) Duplex [Read + Write]
+// *   d) Transform
+// * ##d########################################################
 
 
