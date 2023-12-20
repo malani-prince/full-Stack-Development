@@ -347,35 +347,35 @@ server.listen(5000)
 // * ###################################################
 
 /*
-// npm - Global command, comes with node
-// npm --version
+npm - Global command, comes with node
+npm --version
 
-// * local dependency - use it only this particular project
-// npm i <packageName>    // i ==> Install
+* local dependency - use it only this particular project
+npm i <packageName>    // i ==> Install
 
-// * Global Dependency - use it in any project
-// npm install -g <packageName>
-
-
-// *  package.json - manifest file (store important info about project/package)
-// manual approach (create package.json in the root, create properties etc)
-// npm init (step by step, press enter and skip)
-// npm init -y (everything default)
+* Global Dependency - use it in any project
+npm install -g <packageName>
 
 
-// * npm i lodash 
-// * npm i bootstrap
-// * npm i nodemon --D
+*  package.json - manifest file (store important info about project/package)
+manual approach (create package.json in the root, create properties etc)
+npm init (step by step, press enter and skip)
+npm init -y (everything default)
 
-// * run the command:->  
-// npm start : Similar way mention below 
-// npm run dev : [for the set up in packages.json > scripts > Add this command into script object "dev": "nodemon NodeJS\\app.js" > then run this command 
 
-// * how to uninstall packages
-// * npm uninstall bootstrap
+* npm i lodash 
+* npm i bootstrap
+* npm i nodemon --D
 
-// * install the nodemon
-// npm i nodemon
+* run the command:->  
+npm start : Similar way mention below 
+npm run dev : [for the set up in packages.json > scripts > Add this command into script object "dev": "nodemon NodeJS\\app.js" > then run this command 
+
+* how to uninstall packages
+* npm uninstall bootstrap
+
+* install the nodemon
+npm i nodemon
 
 const _ = require('lodash')
 
@@ -602,6 +602,131 @@ server.listen(5000)
 // *   b) Readable
 // *   c) Duplex [Read + Write]
 // *   d) Transform
+// * ##d##################################################
+
+// * 1 | 2
+/*
+
+// PS C:\main\Full_Stack> nodemon NodeJS/app.js       
+
+// const { readFileSync, writeFileSync, write } = require('fs')
+// const path = require('path')
+// console.log('start')
+
+// const firstFilePath = path.join(__dirname, "content", "first.txt")
+// const secondFilePath = path.join(__dirname, "content", "second.txt")
+
+// const first = readFileSync(firstFilePath, 'utf-8')
+// const second = readFileSync(secondFilePath, 'utf-8')
+
+// console.log(first , second)
+
+// writeFileSync(
+//     path.join(__dirname, "content", "newFileForStorageData.txt"),
+//     `here is the res: ${first}, ${second}`
+// )
+
+// const { writeFileSync, write } = require('fs')
+// const path = require('path')
+// const { createReadStream } = require(fs)
+
+// for (let i = 0; i < 10000; i++) {
+//     writeFileSync(
+//         path.join(__dirname, 'content', 'newFileForStorageData.txt'),
+//         `hello World ${i}\n`,
+//         {flag: 'a'}
+//     )
+// }
+
+
+const path = require('path')
+const { createReadStream } = require('fs')
+
+const stream = createReadStream(
+    path.join(__dirname, "content", "big.txt"),
+    {
+        highWaterMark: 90000,
+        encoding: "utf-8"
+    }
+)
+
+// default size id 64kb
+// last buffer - remainder
+// highWaterMark - control size
+// const stream = createReadStream(path.join(__dirname, "content", "big.txt"),{highWaterMark: 90000,})
+// const stream = createReadStream(path.join(__dirname, "content", "big.txt"),{encoding: "utf-8"})
+
+stream.on(
+    'data',
+    (result) => {
+        console.log(result)
+    }
+)
+stream.on('error', (err)=>console.log(err))
+
+*/
+
+/*
+
+const http = require('http')
+const fs = require('fs')
+const path = require('path')
+const { error } = require('console')
+
+http.createServer(
+    (req, res) => {
+        // const text = fs.readFileSync(path.join(__dirname, 'content', 'big.txt'))
+        // res.end(text)
+        const fileStream = fs.createReadStream(path.join(__dirname, 'content', 'big.txt'), 'utf-8')
+
+        fileStream.on(
+            'open',
+            () => {
+                fileStream.pipe(res)
+            }
+        )
+        fileStream.on(
+            'error',
+            (err) => {
+                console.log(err)
+            }
+        )
+    }
+)
+    .listen(5000)
+
+*/
+
+
+
+
+// * ###########################################################
+// * 1. Done With Node Fundamentals
+// * 2. Next Stop Creating Servers
 // * ##d########################################################
 
+// How we exchange data on web
+// user send https request <==> server response using https
+
+
+// * request Message  ==> What the user send
+// * response         ==> What server send   
+
+/**
+// *  HTTP Methods 
+ * 1. GET
+ * 2. POST
+ * 3. DELETE
+ * 
+ * 
+// * Some parameter are same in both
+ * 1. Request URL
+ * 2. Request Method
+ * 3. status code
+ * 4. remote Address
+ * 5. referrer policy
+ * 
+ * 
+ * 
+ */
 
