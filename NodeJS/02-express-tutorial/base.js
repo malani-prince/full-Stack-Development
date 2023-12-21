@@ -374,7 +374,6 @@ app.listen(5000, () => {
 })
 */
 
-
 // * middle ware | authentication | Methods for middle ware 
 /*
 // * for path query
@@ -467,6 +466,132 @@ app.get('/api/requirement', (req, res) => {
 
 app.listen(5000, () => {
     console.log("server listening on port 5000....")
+})
+
+*/
+
+// * static Assets | parse from data | parse json | http request get json | Postman api introduction and use case
+/*
+const express = require('express')
+const { people } = require('.\\data.js')
+const path = require('path')
+
+app = express()
+
+// * static assets
+app.use(express.static(path.join(__dirname, 'methods-public')))
+
+// * parse from data
+app.use(express.urlencoded({ extended: false }))
+
+// * parse json | http request get json 
+app.use(express.json())
+
+
+// * home page
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        data: people
+    })
+})
+
+
+// * login function
+// Add the data
+app.post('/login', (req, res) => {
+    // get the  form data using "res.body" method. 
+    const { name } = req.body
+
+    if (name) {
+        return res.status(200).send(`Welcome ${name}`)
+    } else {
+        return res.status(401).send("please provide the credential..")
+    }
+})
+
+app.get('/api/people', (req, res) => {
+    res.status(200).json({ success: true, data: people })
+})
+
+
+// * This function in js work for fetch data we send and response it.
+// const fetchPeople = async () => {
+//     try {
+//         //  fetch the data from using axios.get('<path of route>')
+//         const { data } = await axios.get('/api/people')
+
+//         // return the name we fetch to the front end.
+//         const people = data.data.map((person) => {
+//             return `<h5>${person.name}</h5>`
+//         })
+
+//         // change the input text to ==> "" [empty]
+//         result.innerHTML = people.join('')
+//     } catch (error) {
+//         result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`
+//     }
+// }
+// fetchPeople()
+
+
+app.post('/api/people', (req, res) => {
+    const { name } = req.body
+    if (!name) {
+        // msg goes into the javascript.html file and being called.. 
+        return res
+            .status(400)
+            .json({ success: false, msg: 'please provide name value' })
+    }
+    res.status(201).json({ success: true, person: name })
+})
+
+
+
+app.listen(5000, () => {
+    console.log("server listening on port 5000....")
+})
+
+*/
+
+// * Put Request access 
+/*
+app.put('/api/people/:id', (req, res) => {
+    const { id } = req.params  // fetch data from path 
+    const { name } = req.body  // from body section.
+    if (!id && !name) {
+        return res.status(400).json({
+            success: false,
+            msg: "please provide name value"
+        })
+    }
+
+    // * find method is use for finding object
+    const person = people.find(
+        (person) => person.id === Number(id)
+    )
+    console.log(person)
+
+    // * if people is not find or not 
+    if (person === undefined) {
+        return res.status(404).json({
+            success: false,
+            msg: "please provide a Valid ID"
+        })
+    }
+    else {
+        return res.status(200).send({
+            success: true,
+            data: [...people]
+        })
+    }
+    // for (let i = 0; i < people.length; i++) {
+    //     if (people[i].id === Number(id)) {
+    //         people[i].name = name
+    //         break
+    //     }
+    // }
+
 })
 
 */
