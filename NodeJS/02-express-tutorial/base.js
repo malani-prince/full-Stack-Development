@@ -1,6 +1,6 @@
 /**
  * ##############################################################
- *   Create Basic sever | Status code | different routes 
+ *   Create Basic sever | Status code | different routes
  * ##############################################################
  */
 
@@ -75,7 +75,7 @@ server.listen(5000, () => {
 
 /**
  * ##############################################################
-// *  Express Intro  *\\ 
+// *  Express Intro  *\\
 
 // * npm i express --save
 
@@ -84,7 +84,7 @@ server.listen(5000, () => {
  *  [✅]   app.post    : insert data
  *  [✅]   app.put     : update data
  *  [✅]   app.delete  : remove data
- *  [✅]   app.all     : work with all of this 
+ *  [✅]   app.all     : work with all of this
  *  [✅]   app.use     : middleware [crucial part of express]
  *  [✅]   app.listen  : [use port for local machine]
 
@@ -188,7 +188,7 @@ app.listen(5000, () => {
 // * |      RES.JSON()           |             RES.RENDER()    |
 // * |---------------------------------------------------------|
 
-//  * Json Response 
+//  * Json Response
  * ##############################################################
 */
 
@@ -206,7 +206,7 @@ app.get('/', (req, res) => {
     res.status(200).send(
         `
         <h1>Home Page</h1>
-        <a href='/api/products'>Product</a> 
+        <a href='/api/products'>Product</a>
         `
     )
 })
@@ -224,7 +224,7 @@ app.get('/api/products', (req, res) => {
 })
 
 
-// * normal route for handling multiple query with path parameter  
+// * normal route for handling multiple query with path parameter
 app.get('/api/products/:productID/review/:reviewID', (req, res) => {
     const data = req.params
     console.log(data)   // { productID: '23', reviewID: '3' }
@@ -237,11 +237,11 @@ app.get('/api/products/:productID/review/:reviewID', (req, res) => {
 
 // * Add Query in route [instead doing it manually]
 app.get('/api/v1/query', (req, res) => {
-    // http://localhost:5000/api/v1/query?name=%22prince%22 
+    // http://localhost:5000/api/v1/query?name=%22prince%22
     // Add the multiple element with using '&' operator
     // http://localhost:5000/api/v1/query?name=%22prince%22&id=5
     // Outcome: { name: '"prince"' }
-    // n number od query we can pass ans display it 
+    // n number od query we can pass ans display it
 
     const { search, limit } = req.query
     let sortedProducts = [...products]
@@ -254,7 +254,7 @@ app.get('/api/v1/query', (req, res) => {
         )
     }
     // set the limits for the list coming from sortedProduct array.
-    // 
+    //
     if (limit) {
         // python --> a[:2]  | javaScript --> sortedProducts.slice(0, Number(limit))
         sortedProducts = sortedProducts.slice(0, Number(limit))
@@ -313,7 +313,7 @@ app.listen(5000, () => {
 
 */
 
-// * middle ware | use case | "next()" function use. 
+// * middle ware | use case | "next()" function use.
 /*
 const express = require('express')
 const path = require('path')
@@ -323,7 +323,7 @@ const app = express()
 
 // * create the "logger.js" file and transfer the data into it
 
-// // req => middleware => res 
+// // req => middleware => res
 // // when we work with middle ware we use next(). for passing response to next middle ware
 // const logger = (req, res, next) => {
 //     // const method = req.method
@@ -374,7 +374,7 @@ app.listen(5000, () => {
 })
 */
 
-// * middle ware | authentication | Methods for middle ware 
+// * middle ware | authentication | Methods for middle ware
 /*
 // * for path query
 // const logger = require(path.join(__dirname, 'logger.js'))
@@ -389,7 +389,7 @@ const authorize = require('.\\authorize.js')
 const app = express()
 
 // * create the "logger.js" file and transfer the data into it
-// // req => middleware => res 
+// // req => middleware => res
 // // when we work with middle ware we use next(). for passing response to next middle ware
 // const logger = (req, res, next) => {
 //     // const method = req.method
@@ -406,7 +406,7 @@ const app = express()
 
 /*
 // * Middle ware functionality
-// logger functionality 
+// logger functionality
 // app.use(logger)
 // app.use('/api', logger) : for particular use case
 
@@ -484,7 +484,7 @@ app.use(express.static(path.join(__dirname, 'methods-public')))
 // * parse from data
 app.use(express.urlencoded({ extended: false }))
 
-// * parse json | http request get json 
+// * parse json | http request get json
 app.use(express.json())
 
 
@@ -500,7 +500,7 @@ app.get('/', (req, res) => {
 // * login function
 // Add the data
 app.post('/login', (req, res) => {
-    // get the  form data using "res.body" method. 
+    // get the  form data using "res.body" method.
     const { name } = req.body
 
     if (name) {
@@ -538,7 +538,7 @@ app.get('/api/people', (req, res) => {
 app.post('/api/people', (req, res) => {
     const { name } = req.body
     if (!name) {
-        // msg goes into the javascript.html file and being called.. 
+        // msg goes into the javascript.html file and being called..
         return res
             .status(400)
             .json({ success: false, msg: 'please provide name value' })
@@ -554,10 +554,10 @@ app.listen(5000, () => {
 
 */
 
-// * Put Request access 
+// * Put Request access | Route
 /*
 app.put('/api/people/:id', (req, res) => {
-    const { id } = req.params  // fetch data from path 
+    const { id } = req.params  // fetch data from path
     const { name } = req.body  // from body section.
     if (!id && !name) {
         return res.status(400).json({
@@ -572,7 +572,7 @@ app.put('/api/people/:id', (req, res) => {
     )
     console.log(person)
 
-    // * if people is not find or not 
+    // * if people is not find or not
     if (person === undefined) {
         return res.status(404).json({
             success: false,
@@ -596,12 +596,191 @@ app.put('/api/people/:id', (req, res) => {
 
 */
 
+// * Delete Request Access | Route
+/*
+// * Delete Route
+app.delete('/api/people/:id', (req, res) => {
+    const person = people.find((person) => person.id === Number(req.params.id))
+
+    console.log(person)
+
+    if (!person) {
+        return res
+            .status(404)
+            .json({ success: false, msg: `no person with id ${req.params.id}` })
+    }
+    const newPeople = people.filter(
+        (person) => person.id !== Number(req.params.id)
+    )
+
+    console.log(newPeople)
+
+    return res.status(200).json({ success: true, data: newPeople })
+})
+
+*/
+
+// * Whole Above functionality In one flow 
+/*
+const express = require('express')
+const { people } = require('.\\data.js')
+const path = require('path')
+
+app = express()
+
+// * static assets
+app.use(express.static(path.join(__dirname, 'methods-public')))
+
+// * parse from data
+app.use(express.urlencoded({ extended: false }))
+
+// * parse json | http request get json 
+app.use(express.json())
+
+
+// * home page
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        data: people
+    })
+})
+
+
+// * login function
+// Add the data
+app.post('/login', (req, res) => {
+    // get the  form data using "res.body" method. 
+    const { name } = req.body
+
+    if (name) {
+        return res.status(200).send(`Welcome ${name}`)
+    } else {
+        return res.status(401).send("please provide the credential..")
+    }
+})
+
+app.get('/api/people', (req, res) => {
+    res.status(200).json({ success: true, data: people })
+})
+
+// * postman input to this route and return results.
+app.post('/api/postman/people', (req, res) => {
+    const { name } = req.body
+    if (!name) {
+        return res.status(400).json({
+            success: false,
+            msg: "please provide name value"
+        })
+    }
+    res.status(201).send({
+        success: true,
+        data: [...people, name]
+    })
+})
+
+
+// * update route
+app.put('/api/people/:id', (req, res) => {
+    const { id } = req.params  // fetch data from path 
+    const { name } = req.body  // from body section.
+
+    if (!id && !name) {
+        return res.status(400).json({
+            success: false,
+            msg: "please provide name value"
+        })
+    }
+    else {
+        let flag = false
+        for (let i = 0; i < people.length; i++) {
+            if (people[i].id === Number(id)) {
+                people[i].name = name
+                flag = true
+                break
+            }
+        }
+
+        if (!flag) {
+            return res.status(400).json({
+                success: false,
+                msg: `please Insert Valid ID - ${id}`
+            })
+        }
+        else {
+            res.status(200).send({
+                success: true,
+                data: people
+            })
+        }
+    }
+})
+
+// * Delete Route
+app.delete('/api/people/:id', (req, res) => {
+    const person = people.find((person) => person.id === Number(req.params.id))
+
+    console.log(person)
+    
+    if (!person) {
+        return res
+            .status(404)
+            .json({ success: false, msg: `no person with id ${req.params.id}` })
+    }
+    const newPeople = people.filter(
+        (person) => person.id !== Number(req.params.id)
+    )
+
+    console.log(newPeople)
+
+    return res.status(200).json({ success: true, data: newPeople })
+})
+
+
+
+// * This function in js work for fetch data we send and response it.
+// const fetchPeople = async () => {
+//     try {
+//         //  fetch the data from using axios.get('<path of route>')
+//         const { data } = await axios.get('/api/people')
+
+//         // return the name we fetch to the front end.
+//         const people = data.data.map((person) => {
+//             return `<h5>${person.name}</h5>`
+//         })
+
+//         // change the input text to ==> "" [empty]
+//         result.innerHTML = people.join('')
+//     } catch (error) {
+//         result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`
+//     }
+// }
+// fetchPeople()
+app.post('/api/people', (req, res) => {
+    const { name } = req.body
+    if (!name) {
+        // msg goes into the javascript.html file and being called.. 
+        return res
+            .status(400)
+            .json({ success: false, msg: 'please provide name value' })
+    }
+    res.status(201).json({ success: true, person: name })
+})
+
+
+
+app.listen(5000, () => {
+    console.log("server listening on port 5000....")
+})
+
+*/
 
 
 
 
+// * MVC
 
-
-
-
-
+// creating auth.js
+// creating people\\people.js
+// creating controller\\people.js
+// modify app.js 
