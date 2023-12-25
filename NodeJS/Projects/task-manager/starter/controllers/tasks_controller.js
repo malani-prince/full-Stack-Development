@@ -1,16 +1,23 @@
 // * Created he schema.
 const Task = require('..\\models\\task_models')
+const asyncWrapper = require('..\\middleware\\async')
+const { createCustomError } = require('..\\errors\\custome-error')
 
-
-const getAllTasks = async (req, res) => {
-    try {
+// * Get All Task.
+const getAllTasks = asyncWrapper(
+    async (req, res) => {
         const tasks = await Task.find({})
-        res.status(200).json({ tasks })
+        res
+            .status(200)
+            .json({
+                status: "success",
+                dat: {
+                    tasks,
+                    nbHits: tasks.length
+                }
+            })
     }
-    catch (err) {
-        res.json({ message: err })
-    }
-}
+)
 
 // * for creating new Task
 // const createTask = (req, res) => {
@@ -25,50 +32,65 @@ const getAllTasks = async (req, res) => {
 //         "__v": 0
 //     }
 // }
-const createTask = async (req, res) => {
-    // in request you will pass multiple values it also fine.
-    try {
+const createTask = asyncWrapper(
+    async (req, res) => {
+        // in request you will pass multiple values it also fine.
         const task = await Task.create(req.body)
         res.status(200).json({ task })
     }
-    catch (err) {
-        // server error
-        res.status(500).json({
-            message: err
-        })
-    }
-}
+)
 
-
-// * how to get id from the path parameters.
-const getTask = async (req, res) => {
-    try {
+// * fetch single id
+// how to get id from the path parameters.
+const getTask = asyncWrapper(
+    async (req, res, next) => {
         const { id: taskID } = req.params
-        const task = await Task.findOne({ _id: taskID })
+
+        const fetchTask = await Task.findOne({
+            _id: taskID
+        })
+
+        if (!fetchTask) {
+            return next(createCustomError(`no task with id ${taskID}`))
+        }
+        res.status(200).json({ fetchTask })
+    }
+)
+
+// * Update Task.
+const updateTask = asyncWrapper(
+    async (req, res) => {
+        const { id: taskID } = req.params
+
+        const task = await Task.findOneAndUpdate({ _id: taskID }, req.body, {
+            new: true,
+            runValidators: true,
+        })
 
         if (!task) {
-            res.status(404).json({
-                message: `no Task with id = ${taskID}`
-            })
+            return next(createCustomError(`no task with id ${taskID}`))
         }
-        res.status(200).json({
-            task
-        })
-    }
-    catch (err) {
-        res.status(500).json({
-            message: err
-        })
-    }
-}
 
-const updateTask = (req, res) => {
-    res.send("Update Task")
-}
+        res.status(200).json({ task })
+    }
+)
 
-const deleteTask = (req, res) => {
-    res.send("Delete Task")
-}
+// * Delete Task 
+const deleteTask = asyncWrapper(
+    async (req, res) => {
+        const { id: taskID } = req.params
+
+        const fetchTask = await Task.findOneAndDelete({
+            _id: taskID
+        })
+
+        if (!fetchTask) {
+            return next(createCustomError(`no task with id ${taskID}`))
+        }
+        res.status(200).json({ fetchTask })
+    }
+)
+
 
 module.exports = {
     getAllTasks,

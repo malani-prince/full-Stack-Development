@@ -17,7 +17,7 @@ const {
     getTask,
     updateTask,
     deleteTask
-} = require('../controllers/tasks_controller')
+} = require('..\\controllers\\tasks_controller')
 
 
 

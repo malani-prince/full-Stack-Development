@@ -16,21 +16,40 @@
 //                   free cloud hosting - ATLAS
 // * #############################################################
 
-const express = require('express')
+// *                       Patch VS Put
+// * #############################################################
+//  When we use PUT method it will remove the other things which presents into the DATABASE and overWrite the value
+//  and in the patch method - it simply change the part which are mention in the Body part.
+// * #############################################################
+
+
+
+// * Note:
+// 1. When we want to use the app.use(express.static("<path>")) for the path variable must use the package "path" with out path we can not get the Web page.
+
 const path = require('path')
-const route = require('.\\routes\\tasks')
-const contentDB = require('.//db//connection')
-const connectDB = require('.//db//connection')
-require('dotenv').config()
-const MONGO_URI = "mongodb+srv://malaniprince55:123@nodeexpress.yasx2kg.mongodb.net/?retryWrites=true&w=majority"
+
+const express = require('express')
 const app = express()
 
+const route = require('.\\routes\\tasks')
+const connectDB = require('.//db//connection')
+
+require('dotenv').config()
+const MONGO_URI = "mongodb+srv://malaniprince55:123@nodeexpress.yasx2kg.mongodb.net/?retryWrites=true&w=majority"
+
+const notfound = require('.\\middleware\\not-found')
+const errorHandlerMiddleWare = require('.\\middleware\\error-handler')
+
 // * middle ware
-app.use(express.json())   // for response the json in our file formate 
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json());
 
 // * return all Task
 app.use('/api/v1/tasks', route)
 
+app.use(notfound)
+app.use(errorHandlerMiddleWare)
 
 
 const port = 3000
