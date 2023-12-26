@@ -45,9 +45,11 @@ const errorHandlerMiddleWare = require('.\\middleware\\error-handler')
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json());
 
-// * return all Task
+
+// * return all Routes
 app.use('/api/v1/tasks', route)
 
+// Error handle
 app.use(notfound)
 app.use(errorHandlerMiddleWare)
 
