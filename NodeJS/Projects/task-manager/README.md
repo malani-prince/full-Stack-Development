@@ -51,3 +51,9 @@ Task Manager is a simple project for managing tasks. It is built using Node.js a
    - Create middleware for handling errors, using try-catch blocks and path errors.
    - Import the middleware into `app.js`.
    - Implement an error handler to manage errors.
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
