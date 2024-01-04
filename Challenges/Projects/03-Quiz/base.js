@@ -73,7 +73,6 @@ function showQuestion() {
     // * increment the Index while Display
     let questionNo = currentQuestionIndex + 1;
 
-    console.log(questionNo + ". " + currentQuestion.question)
     // * Add the value in the question element (in h2 element)
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
@@ -118,7 +117,6 @@ function showQuestion() {
                     button.disable = true
                 }
             )
-
             nextBtn.style.display = "block"
         })
     });
