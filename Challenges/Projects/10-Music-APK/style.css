@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 100%;
+    height: 12bn0vh;
+
+    background: #333;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.music-player {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 25px 35px;
+    width: 400px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+nav .circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
+}
+
+nav img {
+    padding: 9px;
+}
+
+.song-img {
+    margin-top: -20px;
+    width: 300px;
+    border-radius: 100%;
+    border: 8px solid white;
+}
+
+.music-player h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin-top: 14px;
+}
+
+.music-player p {
+    font-size: 14px;
+    color: #333;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 00, 0.22);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.controls div {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 00, 0.22);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2) {
+    transform: scale(1.5);
+    background-color: rgb(0, 0, 0, 0.22);
+    color: white;
+}
