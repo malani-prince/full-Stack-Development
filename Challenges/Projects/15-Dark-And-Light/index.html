@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/fbb5c6fa2b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav>
+            <img src="./logo.png" alt="" class="logo">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">PortFolio</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+            <img src="./half-moon.png" alt="" width="30px" id="icon">
+        </nav>
+
+        <div class="info">
+            <h1>I'm <span>Prince </span>Malani </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque iste quos.</p>
+            <a href="">Download CV</a>
+        </div>
+
+        <div class="image-box">
+            <img src="./pattern.png" alt="">
+            <img src="./girl.png" alt="" class="back-img">
+        </div>
+
+        <div class="social-links">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+    </div>
+
+    <script>
+        var icon = document.getElementById('icon')
+        icon.onclick = function () {
+            document.body.classList.toggle('dark-theme')
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "./sun.png"
+            } else{
+                icon.src = "./half-moon.png"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
