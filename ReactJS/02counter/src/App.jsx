@@ -17,22 +17,39 @@ function App() {
   //   |___________________________ 
   //                               | 
   //                              \|/  
-  let [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0)
 
   // let counter = 0
+
+  // one work doit more then one times 
+  // Set counter having hidden Function => Callback expect | (prevCounter) is state of lastly updated value.
+  //  
 
   const addValue = () => {
     // console.log("Value Added", Math.random())
     // counter = counter + 1
-    setCounter(counter + 1)
-    console.log(counter)
+
+    // * Use state consider the same changes so it ignores the other changes.
+    // * setCounter(count + 1)   ==> at the last on is called and change the value
+    // * setCounter(count + 1)   ===> similar Change ignore [❌]
+    // * setCounter(count + 1)   ===> similar Change ignore [❌] 
+    // * setCounter(count + 1)   ===> similar Change ignore [❌]
+    // * Return..
+
+    // For really increase the value we have to change apply, variable called "prevCounter." 
+    // * prevCounter is value come from CallBack Function via setCounter | take the value add number | <Move to next> | And return 
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
   }
 
   const subtractValue = () => {
     // console.log("Value subtract", Math.random())
     // counter = counter - 1
     setCounter(counter - 1)
-    if(counter <= 0){
+    if (counter <= 0) {
       setCounter(0)
     }
     console.log(counter)
@@ -46,7 +63,6 @@ function App() {
       <br />
       <br />
       <button onClick={subtractValue}>Remove Value</button>
-      <footer>{counter}</footer>
     </>
   )
 }

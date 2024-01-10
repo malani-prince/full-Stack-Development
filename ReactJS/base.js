@@ -5,14 +5,22 @@
 // conclusion => `
  */
 
-// * Documentation Link for React ===> https://react.dev/learn
-// * Documentation Link for Vite React ===> https://vitejs.dev/
-// * Github ===>  https://github.com/facebook/react
+// * Documentation Link for React : ===> https://react.dev/learn
 
+// * Documentation Link for Vite React : ===> https://vitejs.dev/
 
+// * Github : ===>  https://github.com/facebook/react
+
+// * ReactDOM | Fiber : ===> https://github.com/acdlite/react-fiber-architecture
+
+// * Tailwind : ===> https://tailwindcss.com/
+
+// * for Images : ===> https://www.pexels.com/search/beautiful/
+
+// * for UI template : ===> https://www.devui.io/
 
 //  *  ##############################################################################
-//  *     Date: 8-01-2023  :
+//  *     Date: 8-01-2024  :
 //  *                      : Basic Questions
 //  *                      : Introduction about React
 //  *                      : Introduction about React fundamentals
@@ -88,7 +96,7 @@
 //             c) no routing
 //*      2. framework
 //             a) Next JS <Backend + FrontEnd Both in one file>
-//             b) gatsby 
+//             b) gatsby
 //             c) Remix
 
 
@@ -170,7 +178,7 @@
 
 
 //  *  ##############################################################################
-//  *     Date: 9-01-2023  :
+//  *     Date: 9-01-2024  :
 //  *                      : 1. diff. between vite and normal react
 //  *                      : 2. Working flow of normal and vite react
 //  *                      : 3. code Structure
@@ -184,7 +192,7 @@
 //  *                      :         c.  React to JS
 //  *                      : 9. Evaluation Expression
 //  *                      :         a. Working | constrains
-//  *                      : 10. Hooks
+//  *                      : 10. Hooks - update value on multiple places
 //  *  ##############################################################################
 
 /**
@@ -197,41 +205,41 @@
 // *      1. Normal React Project Working
 // * -----------------------------------------------------------
 
- *  resource =>  
- *           => 
- * 1. Basic React. 
+ *  resource =>
+ *           =>
+ * 1. Basic React.
  *   a) node_modules => Node dependencies
  *   b) Source => index.js | App.js
  *   c) gitignore. => can not upload on Github
  *   d) package-lok.json => Stable version of the lib is store (dependencies are locked)
  *   e) package.json => store the package name and other as well
  *   f) README.md => MArkdownFile
- *   g) ./public/manifest.json => this file use for the mobile version 
+ *   g) ./public/manifest.json => this file use for the mobile version
  *   h) ./public/robots.txt => Search engine.
  *   i) ./public/index.html => Main File | element are being stored in this file
- * 
- * 
+ *
+ *
  *   j) .src/index.js => data from the public is being used.
  *      -> In this using normal DOM the root element of ./public/index.html is selected. | Then Use the ReactDOM Object. <it is the virtual DOM and then it compare with the main DOM | only change require element not whole Code.> | method is use is <createRoot> |  <Refer Code>
  * Method => ReactDOM require the HTML element from the html page and it calls the function using createRoot method. | then createRoot.render => use for render data.
- * 
+ *
 //  *  How the index.html get loaded into the Environment.
  *  in package.json => property "rect-script" Responsible for Load index.js
 
-//  * ================== 
+//  * ==================
 // *        Working
-//  * ================== 
+//  * ==================
  *  1. Create File called  ===> "chai" <With small Letter | capital letter>
 
  *  2. now save the file with extension with ==+> ".js"
 
 //* 3. create function called ===> chai --<| Capital | Small | First Capital | camel Case |>--
 |
- *  4. Export Chai function from ===> "Chai" 
+ *  4. Export Chai function from ===> "Chai"
 
 //* 5. Import this function ===> in "App.jsx" file |<---First letter must be Capital--->|
 
-//* 6. Now, in import statement first letter must be capital ===> ex. <| import Chai from './chai' |>  
+//* 6. Now, in import statement first letter must be capital ===> ex. <| import Chai from './chai' |>
 
 
  *  6. There is a rule of That only one element should be return, If we have to use multiple element then, use the div because it contains multiple element or use  the fragment.
@@ -249,9 +257,9 @@
  *  b) ./src/App.jsx => Handle All the operation <just like controllers>
  *  c) ./src/main.jsx => it is the file that are being use for the handle those function.
 
-//  * ================== 
+//  * ==================
 // *        Working
-//  * ================== 
+//  * ==================
 
  *  1. Create File called  ===> "Chai" <With small Letter | capital letter>
 
@@ -259,7 +267,7 @@
 
 //* 3. create function called ===> Chai <first letter must be capital>
 
- *  4. Export Chai function from ===> "Chai" file 
+ *  4. Export Chai function from ===> "Chai" file
 
 //* 5. Import this function ===> in "App.jsx" file |<---First letter must be Capital--->|
 
@@ -275,9 +283,9 @@
 //  * `````````````````````````````````````````````````````````
  *  ./src/<new File> ==> first letter should be Capital Always...
  *                   ==> in normal React extension : //* js | jsx
- *                   ==> in Vite it must be : //* .jsx 
+ *                   ==> in Vite it must be : //* .jsx
  * ./srv/<new file>  ==> in file, function name start with the Capital letter. | and at the import time Variable also contain the Capital letter.
- * 
+ *
 
 
 
@@ -289,7 +297,7 @@
 
 function customRender(reactElement, container) {
 
-    // * Problem: => single single attribute added on single line 
+    // * Problem: => single single attribute added on single line
 
     // const domElement = document.createElement(reactElement.type)
     // domElement.innerHTML = reactElement.children
@@ -298,7 +306,7 @@ function customRender(reactElement, container) {
     // container.appendChild(domElement)
 
 
-    // Modular Code: 
+    // Modular Code:
     const domElement = document.createElement(reactElement.type)
     domElement.innerHTML = reactElement.children
     for (const prop in reactElement.props) {
@@ -347,21 +355,21 @@ customRender(reactElement, mainContainer)
 // * 5. why the custom not working => Because the properties inside Object does not match with the react properties, thats the reason it is not working.
 
 // * 6. method is React.createElement()   ==>   this function is import by Babel engine.
-// Example: 
+// Example:
 const reactElement = React.createElement(
-    
+
     // 1. Tag name
     'a',
-    
+
     // 2. Object
     {
         href: "https://google.com",
         target: "_blank"
     },
-    
+
     // direct Test,
     "Visit Google Web Hear",
-    
+
     // Evaluated Expression. | <Variable Inject into Web>
     anotherUser
 }
@@ -381,6 +389,99 @@ const reactElement = React.createElement(
 
 
 
+//  *  ##############################################################################
+//  *     Date: 09-01-2024  :
+//  *                       : Virtual DOM
+//  *                       : Fiber
+//  *                       : Props
+//  *                       : Tailwind
+//  *                       : Interview Question
+//  *  ##############################################################################
+
+//* article => https://github.com/acdlite/react-fiber-architecture
+
+/**
+ //  * ------------------------------------------------
+ //  *       Virtual dom  |  Fiber(core Algorithm)
+ //  * ------------------------------------------------
+
+// * Virtual DOM Goal => animation | Reload | Videos | incremental Rendering
+// Tree Updation is very easy
+
+
+// * Key Feature => pause, abort, Reusability as new update come, Ability to assign priority type of update. <Hydretion concept>
+
+
+// * What is reconciliation ? => It is algorithm react use to differentiation one tree with another.""
+// -> Which part must be change  
+// -> reconciliation algorithm behind what is popularly understood as the "Virtual DOM". | <it is the Virtual DOM>
+
+
+//* How it is Working ? => Different component type are assumed to generate substantially different trees. React will nor attempt to diff them, but rather replace the old tree component. 
+
+
+// * -> Interview
+// Why key introduce ? => fiber  |  There is one array and convert this array in form of button, p, h1 etc.. and concept is key introduce. ==> List use for optimization of work in Fiber Algorithm.  |  <diffing of list is perform using keys. keys should be "stable, predictable, and Unique.">
+
+// * reconciliation  versus Rendering ?  => 
+
+//  * What is a Fiber ? (Points)
+ *      1. Pause work and come back to it later
+ *      2. assign priority to different type of work
+ *      3. reuse previous Completed Work
+ *      4. abort work if it's no longer needed 
+
+// * Working Flow : -> React element Created -> Go to Virtual Dom -> Create new state for the given activity -> UI modification done -> If new element coming overwrite the previous.
+
+ //  * ------------------------------------------------
+ //  *                Props + Tailwind
+ //  * ------------------------------------------------
+
+// ********* Tailwind : A utility-first CSS framework *********
+
+
+// * How to Work with tailwind ? 
+//  *       1. npm install -D tailwindcss postcss autoprefixer
+//  *       2. npx tailwindcss init -p   
+//             <Create file Called tailwind.config.js>
+
+
+//  *       3. Now open this new file and change the content to this.
+//                           |
+//                           |
+//                          \|/
+//                     content: [
+//                           "./index.html",
+//                           "./src/**\ *.{js,ts,jsx,tsx}",
+//                     ],
+
+// *        4. Aff the Tailwind dependencies into the index.css file in your project
+//                           |
+//                           |
+//                          \|/
+//                     @tailwind base;
+//                     @tailwind components;
+//                     @tailwind utilities;
+
+// * Props: => it is use for, reusability of component
+
+// * Why Props: 
+// We have one "Card" component and we have to call this card every time when the new user is login at this moment, you are not going to write the whole code twice, or more so We have to create a separately folder in this whole base component is there.
+// and when we require those component we just have to reuse this.
+// * for making the value change inside the Component We require concept Called "Props" 
+// * Props passes as an argument into the function
+
+
+// * -------------------------------------------
+// *            Interview Question.
+// * -------------------------------------------
+
+// 1. counter project 
+//                  : setCounter <> | Use State
+//
+//
+
+*/
 
 
 
