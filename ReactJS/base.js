@@ -19,6 +19,8 @@
 
 // * for UI template : ===> https://www.devui.io/
 
+// * React Route : ===> https://reactrouter.com/en/main
+
 //  *  ##############################################################################
 //  *     Date: 8-01-2024  :
 //  *                      : Basic Questions
@@ -452,7 +454,7 @@ const reactElement = React.createElement(
 //                          \|/
 //                     content: [
 //                           "./index.html",
-//                           "./src/**\ *.{js,ts,jsx,tsx}",
+//                           ".\\src\\**\\*.{js,ts,jsx,tsx}",
 //                     ],
 
 // *        4. Aff the Tailwind dependencies into the index.css file in your project
@@ -484,4 +486,4 @@ const reactElement = React.createElement(
 */
 
 
-
+// Memoization 
