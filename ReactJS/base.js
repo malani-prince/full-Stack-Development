@@ -486,4 +486,110 @@ const reactElement = React.createElement(
 */
 
 
-// Memoization 
+/** 
+// *- Summary of the Lecture
+
+// * 1. create a file called Layout.jsx
+    - provide one Outlet(from react - router - dom)
+    - use: in our website we require Header and footer in every pages at that time the Outlet help to handel those other routes inside it.
+    - syntax:
+    '''
+        < Header />
+        Outlet />   outlet handles other routes and put those inside the outlet.
+        Footer />
+    '''
+
+---
+
+// * 2. Nesting:
+
+//*   => for creating router: 
+        - require Router Provider  (for making router we require Router provider) 
+        - it kind of wrapper that bind all the methods inside it
+        - Syntax =>     <RouterProvider router={router} />
+
+
+//*    => after creating the router provider
+        Step: 1
+            - Layout.jsx plays the important role
+            - creating the routes createBrowserRouter
+            - syntax => "" router = createBrowserRouter( ... ) ""
+
+        --------------------------------------------
+
+        step: 2
+            - create method called ===> createRoutesFromElements() and inside this we have to specifies our all the components.
+            - we nest all the data inside the Layout.jsx component. (show the below example)
+            - for creating the Route use this syntax: 
+                - syntax: 
+                    <Route path='/' element={<Layout />}>
+                    path = when any button or anchor click at that moment this path is called and display the page
+                    element = We just have to specifies the which element we have to call on this route.
+
+// *         - Example Syntax Refer this:
+            '''
+            (main.jsx)
+            const router = createBrowserRouter(
+                createRoutesFromElements(
+                    <Route path='/' element={<Layout />}>   // * Top to the stack and inside it all other routes should ne present
+                        <Route path='' element={<Home />} />
+                        <Route path='about' element={<About />} />
+                        <Route path='contact' element={<Contact />} />
+                        <Route path='user/:userId' element={<User />} />
+                        <Route
+                            loader={gitHubInfoLoader}
+                            path='github'
+                            element={<Github />}
+                        />
+                    </Route>
+                ))
+            '''
+
+            --------------------------------------------
+
+            Step: 3
+            - take the dynamic Value from the URL 
+//*         - syntax: """<Route path='user/:userId' element={<User />} />"""
+            - where the function is calling at that place for grep those value we require to add one hook called 
+//*         "import { useParams } from 'react-router-dom'
+            - now using this method we have to create one object and that's.
+//*         - Example:  const {userId} = useParams()  // var. must be same 
+            - it the value is store inside this variable and we can use this variable any where in our component.
+
+            --------------------------------------------
+
+            Step: 4
+            - Handling API Calls.
+            - inside the Router we have one parameter called "loader" 
+            - loader provide the functionality to load the api calls before clicking 
+            - we have to specifies any API calls with in the loader because it is the optimal. instead of writing inside the function. 
+// *        - click button | Loader call | fetch value and just display (Optimal)
+            - Click button | Use Effect call | fetch call | data store | data convert into Json | and take a Response (normal Method)
+            
+            - data pass through {loader} for catch those data we have to use one hook called 
+//*         "import { useLoaderData } from 'react-router-dom'
+            - loader take a function.
+
+            - Example: 
+            '''
+            (main.jsx)
+                import Github, { gitHubInfoLoader } from './Components/Github/Github.jsx'
+                <Route
+                    loader={gitHubInfoLoader}
+                    path='github'
+                    element={<Github />}
+                />
+            
+            (Github.jsx)
+                export const gitHubInfoLoader = async () => {
+                    const response = await fetch('https://api.github.com/users/malani-prince')
+                    return response.json()
+                }
+            '''
+}
+
+
+
+---
+
+*/
