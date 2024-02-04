@@ -21,6 +21,8 @@
 
 // * React Route : ===> https://reactrouter.com/en/main
 
+// * Context API : ===> https://react.dev/learn/scaling-up-with-reducer-and-context
+
 //  *  ##############################################################################
 //  *     Date: 8-01-2024  :
 //  *                      : Basic Questions
@@ -482,12 +484,23 @@ const reactElement = React.createElement(
 //                  : setCounter <> | Use State
 //
 //
-
 */
 
 
-/** 
-// *- Summary of the Lecture
+
+
+/**
+##############################################################################
+//  *     Date: 1-02-2024  :
+//  *                      : React Routes
+//  *                      : Introduction
+//  *                      : Basics
+##############################################################################
+
+
+ //  * ------------------------------------------------
+ //  *       React Route (Workings with different steps)
+ //  * ------------------------------------------------
 
 // * 1. create a file called Layout.jsx
     - provide one Outlet(from react - router - dom)
@@ -588,8 +601,27 @@ const reactElement = React.createElement(
             '''
 }
 
+*/
 
 
----
+
+//  *  ##############################################################################
+//  *     Date: -4-02-2024  : 
+//  *                       : Context API
+//  *                       : Props
+//  *                       : 2 projects (project style 1 and style 2)
+//  *  ##############################################################################
+
+/**
+
+// * ====================
+// context API
+// * ====================
+
+// * Sever | API => State management is require.
+
+
 
 */
+
+
