@@ -4,7 +4,7 @@ export default function Card() {
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
-                <img className="p-8 rounded-t-lg" src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="product_image1" />
+                <img className="p-8 rounded-t-lg" src="https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png" alt="product_image1" />
             </a>
             <div className="px-5 pb-5">
                 <a href="/">
