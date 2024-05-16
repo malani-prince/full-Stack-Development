@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_bg"
+    tools:context=".activity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/logo" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:text="@string/txtMobileNumber"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                app:CustomTextviewFont="@string/textbold" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="@string/txtEnterMobileNumber"
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_12sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/login_edittext_bg"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/loutSelectContry"
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:id="@+id/txtCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="+91"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp"
+                        app:CustomTextviewFont="@string/textsemimedium" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/icn_down" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/c_EDEBEB" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomEditText
+                    android:id="@+id/edtMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/txtMobileNumber"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:text="7573065676"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    app:CustomEditTextFont="@string/textsemimedium" />
+
+            </LinearLayout>
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:id="@+id/btnLoginWithOtp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/lite_blue_button"
+                android:gravity="center"
+                android:text="@string/txtLoginWithOtp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:CustomTextviewFont="@string/textsemibold" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:id="@+id/btnLoginWithPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bg_loginwith_password"
+                android:gravity="center"
+                android:text="@string/txtLoginWithPassword"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_15sdp"
+                app:CustomTextviewFont="@string/textsemibold" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/txtOr"
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:id="@+id/btnFreeUserLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_loginwith_password"
+                android:gravity="center"
+                android:text="@string/txtFreeUserLogin"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_15sdp"
+                app:CustomTextviewFont="@string/textsemibold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/icn_forgot_pass" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:id="@+id/btnForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:text="@string/txtForgotPassword"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemibold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

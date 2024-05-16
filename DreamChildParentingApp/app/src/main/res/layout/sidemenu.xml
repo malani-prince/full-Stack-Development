@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryVariant"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="Phone Number*"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:CustomTextviewFont="@string/textsemimedium" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/loutViewProfile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_edit_profile"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="View Profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_become_premier"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Become a premier"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_gift_friend"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Gift to a Friends"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_about_us"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="About Us"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loutContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_contact_us"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Contact Us"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loutFeedbackRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_feedback_rateus"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Feedback &amp; Rate Us"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loutChangeLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_change_language"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Change Language"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_be_dreamchild_trainer"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Be a dream child trainer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_frenchise_ask"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Franchise ask"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_personal_counseling_ask"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Personal Counseling ask"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_privacy_policy"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_t_c"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Terms &amp; Conditions"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_setting"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Settings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loutLogout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icn_logout"
+                    app:tint="@color/white" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:text="Logout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

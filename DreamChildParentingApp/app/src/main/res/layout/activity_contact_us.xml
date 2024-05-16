@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context=".activity.DailyActivity">
+
+    <RelativeLayout
+        android:id="@+id/loutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/icn_backarrow" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Contact Us"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/loutActionBar"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="Leave us a message,we will get contact with you as soon as possible."
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_13sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/contact_us_lable_bg"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Our Helpline"
+                    android:textColor="@color/c_8d95a1"
+                    android:textSize="@dimen/_14sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/loutContactNoFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icn_phone" />
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="+91 7737717711"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemibold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/loutContactNoFirst"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icn_phone" />
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="+91 7737717711"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemibold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/contact_us_yellow_bg"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Our Email Address"
+                    android:textColor="@color/c_8d95a1"
+                    android:textSize="@dimen/_14sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:adjustViewBounds="true"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/icn_mail" />
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:text="support@dreamchildparenting.com"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemibold" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Name*"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/login_edittext_bg"
+                android:hint="Enter Your Name"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomEditTextFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Email Address*"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/login_edittext_bg"
+                android:hint="Enter Your Email Address"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomEditTextFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Message*"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/login_edittext_bg"
+                android:gravity="start"
+                android:hint="What do you want to tell us about?"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomEditTextFont="@string/textsemimedium" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.dnk.dreamchildparenting.Custom.CustomTextView
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/lite_blue_button"
+        android:gravity="center"
+        android:text="Submit Now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:CustomTextviewFont="@string/textsemibold" />
+</RelativeLayout>

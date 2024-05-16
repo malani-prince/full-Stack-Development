@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context=".activity.DailyActivity">
+
+    <RelativeLayout
+        android:id="@+id/loutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/icn_backarrow" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Question (1/10)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNext"
+        android:layout_below="@+id/loutActionBar"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="How likely is it that you would recommend this company to a friend or colleague ?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_17sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/ans_adapter_raw" />
+
+
+    </LinearLayout>
+
+    <com.dnk.dreamchildparenting.Custom.CustomTextView
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/lite_blue_button"
+        android:gravity="center"
+        android:text="NEXT"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:CustomTextviewFont="@string/textsemibold" />
+</RelativeLayout>

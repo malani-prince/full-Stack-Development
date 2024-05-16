@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/my_child_adapter_raw_bg"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/icnUser"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icn_default_user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icnUser"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Child 1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemibold" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Child Age: 5 Years 2 Days"
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemiregular" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender: Male"
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemiregular" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

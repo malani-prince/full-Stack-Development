@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.dnk.dreamchildparenting.Custom.CustomTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15sdp"
+        android:text="Test"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:CustomTextviewFont="@string/textsemimedium" />
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_15sdp"
+            android:text="Test"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            app:CustomTextviewFont="@string/textsemimedium" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/c_efefef"
+        android:visibility="visible" />
+</LinearLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_bg"
+    tools:context=".activity.DailyActivity">
+
+    <RelativeLayout
+        android:id="@+id/loutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/icn_backarrow" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Plan 0 - 4 Years"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_16sdp"
+            app:CustomTextviewFont="@string/textbold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loutActionBar"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/login_edittext_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icnPlan"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/icn_plan" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/loutAmount"
+                android:layout_toRightOf="@+id/icnPlan"
+                android:orientation="vertical">
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:id="@+id/txtPlanTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Plan 0-4 Years"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp"
+                    app:CustomTextviewFont="@string/textsemibold" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="The Blue Bell C 1101, Opp: Maharaja Farm"
+                    android:textColor="@color/c_8d95a1"
+                    android:textSize="@dimen/_11sdp"
+                    app:CustomTextviewFont="@string/textsemimedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loutAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:id="@+id/txtPlanAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Rs. 2000"
+                        android:textColor="@color/colorPrimaryVariant"
+                        android:textSize="@dimen/_12sdp"
+                        app:CustomTextviewFont="@string/textsemibold" />
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Amount"
+                        android:textColor="@color/c_8d95a1"
+                        android:textSize="@dimen/_11sdp"
+                        app:CustomTextviewFont="@string/textsemimedium" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/c_EDEBEB" />
+
+        <RelativeLayout
+            android:id="@+id/loutProductTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Expire Date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textbold" />
+
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="24 Nov 2021"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textSize="@dimen/_12sdp"
+                app:CustomTextviewFont="@string/textsemibold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/c_EDEBEB" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="Description"
+            android:textColor="@color/c_8d95a1"
+            android:textSize="@dimen/_11sdp"
+            app:CustomTextviewFont="@string/textsemimedium" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+            android:textColor="@color/c_8d95a1"
+            android:textSize="@dimen/_11sdp"
+            app:CustomTextviewFont="@string/textsemimedium" />
+    </LinearLayout>
+</RelativeLayout>

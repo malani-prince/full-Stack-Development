@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+    <com.vlstr.blurdialog.BlurDialog
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/blurView"
+        app:blurOverlayColor="@android:color/transparent"
+        app:blurDialogTitle=""
+        app:blurDialogDuration="length_infinite"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+    <RelativeLayout
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/progress_logo" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/bg_progressbar_state"
+            android:indeterminateDuration="1000" />
+    </RelativeLayout>
+
+</RelativeLayout>

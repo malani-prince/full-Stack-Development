@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context=".activity.DailyActivity">
+
+    <RelativeLayout
+        android:id="@+id/loutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/icn_backarrow" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Cart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnProcessToPay"
+        android:layout_below="@+id/loutActionBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:background="@drawable/login_edittext_bg">
+
+                <RelativeLayout
+                    android:id="@+id/loutAddressData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Delivery to Dream child User"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_14sdp"
+                            app:CustomTextviewFont="@string/textbold" />
+
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="The Blue Bell C 1101, Opp: Maharaja Farm, \nNear: Bhavani Heights,\nMota Vrachha\nSurat- 394101."
+                            android:textColor="@color/c_8d95a1"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemimedium" />
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="Phone Number: +91 7737717711"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemimedium" />
+                    </LinearLayout>
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:id="@+id/txtChangeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/change_address_btn_bg"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Change"
+                        android:textColor="@color/colorPrimaryVariant"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:CustomTextviewFont="@string/textbold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/loutAddNewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_blur_dialog_corner_radius"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="+ ADD NEW ADDRESS"
+                        android:textColor="@color/colorPrimaryVariant"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        app:CustomTextviewFont="@string/textbold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loutPlanList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/loutProductList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/loutProductTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.dnk.dreamchildparenting.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Dream Child Product"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp"
+                        app:CustomTextviewFont="@string/textbold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.dnk.dreamchildparenting.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="1 Product Added"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="@dimen/_12sdp"
+                            app:CustomTextviewFont="@string/textsemibold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:src="@drawable/icn_right_arrow"
+                            app:tint="@color/colorPrimaryVariant" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loutProductTitle"
+                    android:paddingVertical="@dimen/_10sdp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.dnk.dreamchildparenting.Custom.CustomTextView
+        android:id="@+id/btnProcessToPay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/lite_blue_button"
+        android:gravity="center"
+        android:text="Process to pay Rs.8000.00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:CustomTextviewFont="@string/textsemibold" />
+</RelativeLayout>

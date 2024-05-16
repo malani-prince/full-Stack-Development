@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context=".activity.DailyActivity">
+
+    <RelativeLayout
+        android:id="@+id/loutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/icn_backarrow" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Report"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/filterBtns"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/loutActionBar"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/activity_buttons"
+        android:orientation="horizontal">
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtWeekly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.33"
+            android:background="@drawable/left_selected_light_blue_bg"
+            android:gravity="center"
+            android:text="Weekly"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:CustomTextviewFont="@string/textsemiregular" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryVariant" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtMonthly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="Monthly"
+            android:textColor="@color/colorPrimaryVariant"
+            android:textSize="@dimen/_13sdp"
+            app:CustomTextviewFont="@string/textsemiregular" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryVariant" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/txtYearly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="Yearly"
+            android:textColor="@color/colorPrimaryVariant"
+            android:textSize="@dimen/_13sdp"
+            app:CustomTextviewFont="@string/textsemiregular" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filterBtns"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/loutReportList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

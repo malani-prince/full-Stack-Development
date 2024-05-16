@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Dream Child Parenting</string>
+
+    <!--Font Style-->
+    <string name="textbhaloobhairegular">BalooBhai-Regular.ttf</string>
+    <string name="textbold">SamsungOne-bold.ttf</string>
+    <string name="textsemimedium">SamsungOne-medium.ttf</string>
+    <string name="textsemiregular">SamsungOne-regular.ttf</string>
+    <string name="textsemibold">SamsungOne-semibold.ttf</string>
+    <!--End Font Style-->
+    <string name="txtcontinue">Continue</string>
+    <string name="txtchooseLanguage">Choose your Preferred languages</string>
+    <string name="txtMobileNumber">Mobile Number</string>
+    <string name="txtEnterMobileNumber">Please enter your mobile number</string>
+    <string name="txtLoginWithOtp">Login with OTP</string>
+    <string name="txtLoginWithPassword">Login with Password</string>
+    <string name="txtFreeUserLogin">Free User Login</string>
+    <string name="txtOr">Or</string>
+    <string name="txtForgotPassword">Forgot Password?</string>
+    <string name="txtSignupTitle">Free User Sign up</string>
+    <string name="txtNotificationTitle">Notification</string>
+
+
+    <!--Sign Up Screen-->
+    <string name="txtName">Name*</string>
+    <string name="txtNameHint">Enter Your Name</string>
+    <string name="txtPhoneNumber">Phone Number*</string>
+    <string name="txtPhoneNumberHint">Enter mobile number</string>
+
+</resources>

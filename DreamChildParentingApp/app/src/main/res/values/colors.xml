@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#002d78</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="colorPrimaryVariant">#02b9ef</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="c_8EC5DD">#B6E9FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="c_e9effd">#e9effd</color>
+    <color name="c_8d95a1">#8d95a1</color>
+    <color name="c_cecece">#cecece</color>
+    <color name="c_EDEBEB">#EDEBEB</color>
+    <color name="c_e3f9ff">#e3f9ff</color>
+    <color name="c_BEF2FF">#BEF2FF</color>
+    <color name="c_fffcee">#fffcee</color>
+    <color name="c_ffed99">#ffed99</color>
+    <color name="c_E61919">#E61919</color>
+    <color name="c_787878">#787878</color>
+    <color name="c_c6cfd4">#c6cfd4</color>
+    <color name="c_dee3e6">#dee3e6</color>
+    <color name="c_efefef">#efefef</color>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <com.vlstr.blurdialog.BlurDialog
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="visible"
+        android:background="@drawable/bottom_dialog_bg"
+        app:blurDialogDuration="length_infinite"
+        app:blurDialogTitle=""
+        app:blurOverlayColor="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/loutActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/icn_backarrow" />
+
+                <com.dnk.dreamchildparenting.Custom.CustomTextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Select Address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_16sdp"
+                    app:CustomTextviewFont="@string/textbold" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </com.vlstr.blurdialog.BlurDialog>
+</RelativeLayout>

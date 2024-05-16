@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_bg"
+    tools:context=".activity.ForgotPasswordActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/icn_backarrow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/icn_otp_verification" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:text="Verify Mobile Number"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_20sdp"
+            app:CustomTextviewFont="@string/textbold" />
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:text="We have sent an one time verification code to your registred mobile - XXXXXXX711"
+            android:textColor="@color/c_8d95a1"
+            android:textSize="@dimen/_12sdp"
+            app:CustomTextviewFont="@string/textsemimedium" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="number"
+            android:itemBackground="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            app:OtpItemCount="4"
+            app:OtpLineColor="@color/c_cecece"
+            app:OtpViewType="line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="00:44"
+                android:textColor="@color/c_8d95a1"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+
+            <com.dnk.dreamchildparenting.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="Resend OTP"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:CustomTextviewFont="@string/textsemimedium" />
+        </RelativeLayout>
+
+        <com.dnk.dreamchildparenting.Custom.CustomTextView
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/lite_blue_button"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:CustomTextviewFont="@string/textsemibold" />
+    </LinearLayout>
+</RelativeLayout>
